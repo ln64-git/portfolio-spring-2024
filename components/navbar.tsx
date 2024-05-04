@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -27,10 +28,18 @@ import {
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const [navbarMenuOpen, setNavbarMenuOpen] = useState(false);
+  const path = usePathname();
+  useEffect(() => {
+    setNavbarMenuOpen(false);
+  }, [path]);
+
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar isMenuOpen={navbarMenuOpen} maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -61,14 +70,11 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
-            <TwitterIcon className="text-default-500" />
-          </Link>
           <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
             <DiscordIcon className="text-default-500" />
           </Link>
-          <Link isExternal href={siteConfig.links.github} aria-label="Github">
-            <GithubIcon className="text-default-500" />
+          <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
+            <TwitterIcon className="text-default-500" />
           </Link>
           <Link
             isExternal
@@ -77,25 +83,35 @@ export const Navbar = () => {
           >
             <LinkedinIcon className="text-default-500" />
           </Link>
+          <Link isExternal href={siteConfig.links.github} aria-label="Github">
+            <GithubIcon className="text-default-500" />
+          </Link>
           <ThemeSwitch />
         </NavbarItem>
+        <NavbarMenuToggle
+          onClick={() => {
+            setNavbarMenuOpen(!navbarMenuOpen);
+          }}
+          isSelected={navbarMenuOpen}
+          className="lg:hidden"
+        />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="sm:hidden basis pl-4 " justify="end">
         <Link isExternal href={siteConfig.links.github} aria-label="Github">
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle isSelected={navbarMenuOpen} />
       </NavbarContent>
 
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color={"foreground"} href="#" size="lg">
+              <NextLink color="foreground" href={item.href}>
                 {item.label}
-              </Link>
+              </NextLink>
             </NavbarMenuItem>
           ))}
         </div>

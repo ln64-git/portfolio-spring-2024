@@ -27,8 +27,8 @@ export const title = tv({
 	compoundVariants: [
 		{
 			color: [
-				"violet",
 				"yellow",
+				"violet",
 				"blue",
 				"cyan",
 				"green",
