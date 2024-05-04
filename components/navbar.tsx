@@ -102,7 +102,12 @@ export const Navbar = () => {
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle isSelected={navbarMenuOpen} />
+        <NavbarMenuToggle
+          onClick={() => {
+            setNavbarMenuOpen(!navbarMenuOpen);
+          }}
+          isSelected={navbarMenuOpen}
+        />
       </NavbarContent>
 
       <NavbarMenu>

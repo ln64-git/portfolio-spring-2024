@@ -14,15 +14,15 @@ export const siteConfig = {
 		},
 		{
 			label: "Projects",
-			href: "/docs",
+			href: "/projects",
 		},
 		{
 			label: "Experience",
-			href: "/pricing",
+			href: "/experience",
 		},
 		{
 			label: "Contact",
-			href: "/blog",
+			href: "/contact",
 		},
 	],
 	links: {
