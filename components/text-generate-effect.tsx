@@ -28,8 +28,8 @@ export const TextGenerateEffect = ({
   }, [scope.current]);
 
   const actionWordOneClasses = cn(title({ color: "violet" }), "opacity-0");
-  const actionWordTwoClasses = cn(title({ color: "blue" }), "opacity-0");
-  const actionWordThreeClasses = cn(title({ color: "yellow" }), "opacity-0");
+  const actionWordTwoClasses = cn(title({ color: "blue" }), "opacity-0 ");
+  const actionWordThreeClasses = cn(title({ color: "yellow" }), "opacity-0 ");
 
   const wordClasses = (index: number) => {
     if (index === 0) {
