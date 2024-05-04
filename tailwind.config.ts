@@ -1,8 +1,4 @@
 import { nextui } from '@nextui-org/theme'
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,35 +7,30 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
-  theme: {
-    extend: {
-      animation: {
-        aurora: "aurora 60s linear infinite",
-      },
-      keyframes: {
-        aurora: {
-          from: {
-            backgroundPosition: "50% 50%, 50% 50%",
-          },
-          to: {
-            backgroundPosition: "350% 50%, 350% 50%",
+  theme: {},
+  darkMode: "class",
+  plugins: [nextui({
+    themes: {
+      light: {
+        colors: {
+          background: "#97a2c6ff", // Example: Light yellow color
+          content1: "#7799d8",
+          default: "#2d2d2d",
+          // overlay: "#00ee30", // Example: Light yellow color
+          // content2: "#ee00ae",
+          // content3: " #7fee00",
+          // default: " #ee0000",
+          // content4: " #ee00ae",
+
+
+          primary: {
+            //... 50 to 900
+            foreground: "#7d3030",
+            DEFAULT: "#2d2d2d",
           },
         },
       },
-    },
-  },
-  darkMode: "class",
-  plugins: [nextui(), addVariablesForColors],
+    }
+  })],
 }
 
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}
