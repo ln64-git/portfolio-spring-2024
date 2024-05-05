@@ -26,7 +26,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
           baseHue={130}
           className="flex flex-col w-full h-full"
         > */}
-        <AuroraBackground>{children}</AuroraBackground>
+        {children}
         {/* </Vortex> */}
       </NextThemesProvider>
     </NextUIProvider>

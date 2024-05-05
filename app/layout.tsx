@@ -42,11 +42,15 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <Navbar />
-            <main className="container mx-auto max-w-7xl flex-grow">
-              {children}
-            </main>
+          <div className="relative min-h-screen">
+            <AuroraBackground className="fixed h-screen inset-0 z-0">
+              <div className="relative z-10 overflow-y-scroll">
+                <Navbar />
+                <main className="container mx-auto max-w-7xl flex-grow">
+                  {children}
+                </main>
+              </div>
+            </AuroraBackground>
           </div>
         </Providers>
       </body>
