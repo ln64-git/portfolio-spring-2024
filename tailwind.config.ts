@@ -33,7 +33,7 @@ module.exports = {
       light: {
         colors: {
           background: "#97a2c6ff", // Example: Light yellow color
-          content1: "#7799d8",
+          content1: "#9ba3c7ff",
           default: "#2d2d2d",
           // overlay: "#00ee30", // Example: Light yellow color
           // content2: "#ee00ae",

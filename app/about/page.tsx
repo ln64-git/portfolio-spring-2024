@@ -27,7 +27,7 @@ export default function AboutPage() {
 
   return (
     <div id="About" className=" w-full mx-auto max-w-[1250px]  py-2  ">
-      <div className="px-6 mx-auto w-full flex max-w-[800px] items-center justify-around p-2">
+      <div className="px-6 mx-auto w-full flex max-w-[700px] items-center justify-around p-2">
         <div className="flex items-center justify-center">
           <Image
             width={150}
@@ -37,16 +37,18 @@ export default function AboutPage() {
           />
         </div>
         <div className=" flex items-center justify-center">
-          <div className="ml-4 flex flex-col items-center">
-            <h1 className="inline font-semibold text-2xl md:text-4xl">About</h1>
-            <div className="leading-5 px-auto mx-auto max-w-[400px] text-sm sm:text-lg items-center justify-center">
+          <div className="ml-4 flex flex-col items-center ">
+            <h1 className="inline font-semibold text-2xl md:text-4xl text-left  w-full px-4 md:px-0">
+              About
+            </h1>
+            <div className="leading-5 px-auto mx-auto max-w-[400px] text-sm px-4 md:px-0 sm:text-lg items-center text-left justify-center">
               {summary}
             </div>
           </div>
         </div>
       </div>
-      <div className="px-4 mx-auto w-full flex max-w-[850px] items-center justify-around ">
-        <p className="px-auto mx-auto py-4 text-left text-sm sm:text-xl items-center justify-center leading-6">
+      <div className="px-4 mx-auto w-full flex max-w-[800px] items-center justify-around ">
+        <p className="px-auto mx-auto pt-2 text-left text-md sm:text-xl items-center justify-center leading-6">
           I am 27 years old and eager to prove myself in the field of
           Technology. As someone who has been passionate about computers since I
           was a young I decided 3 years ago that I was ready to apply myself to
