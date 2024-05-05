@@ -1,3 +1,5 @@
+// @ts-ignore
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
 import { nextui } from '@nextui-org/theme'
 
 /** @type {import('tailwindcss').Config} */
@@ -7,7 +9,24 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
-  theme: {},
+  theme: {
+    extend: {
+      animation: {
+        aurora: "aurora 60s linear infinite",
+      },
+      keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+      },
+    },
+
+  },
   darkMode: "class",
   plugins: [nextui({
     themes: {
@@ -31,6 +50,16 @@ module.exports = {
         },
       },
     }
-  })],
+  }), addVariablesForColors],
 }
 
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

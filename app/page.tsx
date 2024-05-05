@@ -24,7 +24,7 @@ export default function Home() {
         <TextGenerateEffect
           className={title()}
           words={
-            "Innovative software developer with experience in Cybersecurity, and Full-Stack Develpment."
+            "Innovative software developer with experience in Cybersecurity, and Full-Stack Development."
           }
         />
         {/* <h1 className={title({ color: "cyan" })}> frontend, </h1> */}

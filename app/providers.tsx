@@ -7,6 +7,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useTheme } from "next-themes";
 import { ThemeProviderProps } from "next-themes/dist/types";
 import { Vortex } from "@/components/vortex";
+import { AuroraBackground } from "@/components/aurora-background";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -19,16 +20,14 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   return (
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider {...themeProps}>
-        <Vortex
-          baseRadius={2}
+        {/* <Vortex
           backgroundColor={"transparent"}
-          rangeY={800}
-          particleCount={35}
+
           baseHue={130}
           className="flex flex-col w-full h-full"
-        >
-          {children}
-        </Vortex>
+        > */}
+        <AuroraBackground>{children}</AuroraBackground>
+        {/* </Vortex> */}
       </NextThemesProvider>
     </NextUIProvider>
   );

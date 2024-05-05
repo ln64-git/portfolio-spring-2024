@@ -41,7 +41,6 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {/* <AuroraBackground> */}
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
@@ -50,7 +49,6 @@ export default function RootLayout({
             </main>
           </div>
         </Providers>
-        {/* </AuroraBackground> */}
       </body>
     </html>
   );
