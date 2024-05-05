@@ -38,14 +38,17 @@ export default function AboutPage() {
         </div>
         <div className=" flex items-center justify-center">
           <div className="ml-2 flex flex-col items-center ">
-            <div className="inline text-2xl md:text-5xl text-left pb-1 w-full px-4 md:px-0">
+            <div className="inline text-3xl md:text-5xl text-left pb-1 w-full px-4 md:px-0">
               {name}
             </div>
 
             <div className="leading-6 md:leading-7 px-auto mx-auto max-w-[400px] text-sm px-4 md:px-0 sm:text-lg text-left justify-center">
               <ul>
                 {info.map((element, index) => (
-                  <li key={index} className="text-xl my-2  font-light text-left">
+                  <li
+                    key={index}
+                    className="text-xl my-2  font-light text-left"
+                  >
                     {element}
                   </li>
                 ))}
@@ -57,7 +60,7 @@ export default function AboutPage() {
 
       <div className="pt-10">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
-          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full px-4 md:px-0">
+          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full ">
             Front-End
           </h1>
 
@@ -106,7 +109,7 @@ export default function AboutPage() {
 
       <div className="pt-10">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
-          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full px-4 md:px-0">
+          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full ">
             Front-End
           </h1>
           <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md sm:text-xl items-center justify-center max-w-[700px] ">
@@ -153,7 +156,7 @@ export default function AboutPage() {
       </div>
       <div className="pt-10 pb-20">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
-          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full px-4 md:px-0 ">
+          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full  ">
             Front-End
           </h1>
           <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md sm:text-xl items-center justify-center max-w-[700px] ">
