@@ -31,35 +31,19 @@ export default function Experience(data: JobProps) {
     // if (windowSize > 400) {
     return (
       <div className="flex justify-center">
-        <div className="mx-6 w-1/2 text-right font-light text-default ">
+        <div className="mx-6 w-1/2 text-right font-light  ">
           <div>{startDate}</div>
         </div>
-        <div className="text-default">-</div>
-        <div className="mx-6 w-1/2 text-left font-light text-default ">
+        <div className="">-</div>
+        <div className="mx-6 w-1/2 text-left font-light  ">
           <div>{endDate}</div>
         </div>
       </div>
     );
-
-    // else {
-    // return (
-    //   <div className="flex justify-center">
-    //     <div className="mx-6 w-1/2 text-right font-light ">
-    //       <div>{startMonth}</div>
-    //       <div>{startYear}</div>
-    //     </div>
-    //     <div className="">-</div>
-    //     <div className="mx-6 w-1/2 text-left font-light ">
-    //       <div>{endMonth}</div>
-    //       <div>{endYear}</div>
-    //     </div>
-    //   </div>
-    // );
-    // }
   };
 
   return (
-    <div className="mx-auto max-w-[700px] py-2 md:py-4">
+    <div className="mx-auto max-w-[700px] py-2 md:py-2">
       <div className="flex h-[40px] items-center justify-center text-2xl md:text-3xl my-2 md:my-4  ">
         {data.role}
       </div>
@@ -85,7 +69,7 @@ export default function Experience(data: JobProps) {
         <ul className=" flex flex-col justify-center items-center">
           {data.bulletArray.map((bullet, index) => (
             <li
-              className=" px-auto list-disc pt-4 text-sm text-default text-left leading-6 md:leading-7 max-w-[580px] mx-4  "
+              className=" px-auto list-disc pt-4 text-sm  text-left leading-6 md:leading-7 max-w-[580px] mx-4  "
               key={index}
             >
               {bullet}

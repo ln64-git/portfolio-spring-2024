@@ -6,6 +6,7 @@ const projectData = [
       'Developed a modern and lightweight portfolio website that showcases proficiency in advanced CSS techniques and seamless integration of JavaScript libraries including Framer Motion and EmailJS. The portfolio effectively demonstrates a deep understanding of front-end development best practices and the ability to create visually appealing and interactive user experiences.',
     image: 'portfolio',
     techArray: ['next', 'react'],
+    demoUrl: 'https://lukeanthony007.com/',
     githubUrl: 'https://github.com/ln64-git/vite-react-portfolio',
   },
   {

@@ -54,7 +54,7 @@ export default function Project(data: ProjectProps) {
           </div>
         </div>
       </div>
-      <div className="mx-auto my-2 flex max-w-[475px] items-center justify-center align-middle  text-center">
+      <div className="mx-auto my-6 flex max-w-[475px] items-center justify-center align-middle  text-center">
         <div className="flex h-full w-full items-center justify-between ">
           <Link
             href={data.githubUrl}
@@ -74,7 +74,7 @@ export default function Project(data: ProjectProps) {
           )}
         </div>
       </div>
-      <div className="mx-auto max-w-[600px]   py-2 text-sm leading-6 md:leading-7 text-left ">
+      <div className="mx-auto max-w-[600px] px-2  py-2 text-sm leading-6 md:leading-7 text-left ">
         {data.summary}
       </div>
     </div>

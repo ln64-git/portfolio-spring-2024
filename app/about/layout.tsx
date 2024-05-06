@@ -4,7 +4,7 @@ export default function AboutLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<section className="flex flex-col items-center justify-center w-full">
+		<section className="flex flex-col items-center justify-center w-full pb-2">
 			<div className="inline-block text-center justify-center w-full">
 				{children}
 			</div>

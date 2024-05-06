@@ -58,48 +58,53 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="pt-10 ">
+      <div className="pt-4 ">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
-          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full ">
+          <h1 className="max-w-[700px] inline font-semibold text-4xl md:text-3xl text-left  w-full ">
+            About me
+          </h1>
+          <p className="pb-4 leading-7 md:leading-9 px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
+            Innovative software developer with a strong background in full-stack
+            web development and cybersecurity. Passionate about building
+            efficient, accessible, and user-friendly applications that deliver
+            high-quality results. Dedicated to continuous learning, staying
+            up-to-date with the latest industry trends, and thriving in
+            collaborative environments committed to achieving company goals
+            through teamwork and innovative solutions.
+          </p>
+          <h1 className="max-w-[700px] mt-4 inline font-semibold text-2xl md:text-3xl text-left  w-full ">
             Front-End
           </h1>
 
           <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
-            I built multiple full-stack application using JavaScript
-            meta-frameworks such as Next.js, and Nuxt.js, I am currently
-            expanding
+            I have built multiple full-stack applications using modern
+            JavaScript frameworks and libraries. My front-end skills span across
+            a wide range of technologies, enabling me to create responsive,
+            interactive, and visually appealing user interfaces. I am constantly
+            expanding my knowledge to deliver cutting-edge, user-centric web
+            experiences.
           </p>
         </div>
         <div className="pt-4 max-w-[700px] mx-auto">
           <Accordion variant="splitted">
             <AccordionItem key="1" aria-label="Skills" title="Skills">
-              <Table aria-label="Example static collection table">
+              <Table
+                removeWrapper={false}
+                aria-label="Example static collection table"
+              >
                 <TableHeader>
-                  <TableColumn>NAME</TableColumn>
-                  <TableColumn>ROLE</TableColumn>
-                  <TableColumn>STATUS</TableColumn>
+                  <TableColumn className="text-left">NAME</TableColumn>
+                  <TableColumn className="text-right">YEARS</TableColumn>
                 </TableHeader>
                 <TableBody>
-                  <TableRow key="1">
-                    <TableCell>Tony Reichert</TableCell>
-                    <TableCell>CEO</TableCell>
-                    <TableCell>Active</TableCell>
-                  </TableRow>
-                  <TableRow key="2">
-                    <TableCell>Zoey Lang</TableCell>
-                    <TableCell>Technical Lead</TableCell>
-                    <TableCell>Paused</TableCell>
-                  </TableRow>
-                  <TableRow key="3">
-                    <TableCell>Jane Fisher</TableCell>
-                    <TableCell>Senior Developer</TableCell>
-                    <TableCell>Active</TableCell>
-                  </TableRow>
-                  <TableRow key="4">
-                    <TableCell>William Howard</TableCell>
-                    <TableCell>Community Manager</TableCell>
-                    <TableCell>Vacation</TableCell>
-                  </TableRow>
+                  {skills1.map(([name, years], index) => (
+                    <TableRow key={index}>
+                      <TableCell className="text-left text-lg">
+                        {name}
+                      </TableCell>
+                      <TableCell className="text-right">{years}</TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </AccordionItem>
@@ -110,59 +115,56 @@ export default function AboutPage() {
       <div className="pt-10">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
           <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full ">
-            Front-End
+            Back-End
           </h1>
           <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
-            I built multiple full-stack application using JavaScript
-            meta-frameworks such as Next.js, and Nuxt.js, I am currently
-            expanding
+            On the server-side, I have experience working with diverse
+            technologies and frameworks to develop robust, scalable, and secure
+            back-end systems. I strive to design efficient and maintainable
+            architectures that power the core functionality of applications. I
+            am always eager to learn and adapt to new back-end technologies to
+            build high-performance solutions.
           </p>
         </div>
         <div className="pt-4 max-w-[700px] mx-auto">
           <Accordion variant="splitted">
             <AccordionItem key="1" aria-label="Skills" title="Skills">
-              <Table aria-label="Example static collection table">
+              <Table
+                removeWrapper={false}
+                aria-label="Example static collection table"
+              >
                 <TableHeader>
-                  <TableColumn>NAME</TableColumn>
-                  <TableColumn>ROLE</TableColumn>
-                  <TableColumn>STATUS</TableColumn>
+                  <TableColumn className="text-left">NAME</TableColumn>
+                  <TableColumn className="text-right">YEARS</TableColumn>
                 </TableHeader>
                 <TableBody>
-                  <TableRow key="1">
-                    <TableCell>Tony Reichert</TableCell>
-                    <TableCell>CEO</TableCell>
-                    <TableCell>Active</TableCell>
-                  </TableRow>
-                  <TableRow key="2">
-                    <TableCell>Zoey Lang</TableCell>
-                    <TableCell>Technical Lead</TableCell>
-                    <TableCell>Paused</TableCell>
-                  </TableRow>
-                  <TableRow key="3">
-                    <TableCell>Jane Fisher</TableCell>
-                    <TableCell>Senior Developer</TableCell>
-                    <TableCell>Active</TableCell>
-                  </TableRow>
-                  <TableRow key="4">
-                    <TableCell>William Howard</TableCell>
-                    <TableCell>Community Manager</TableCell>
-                    <TableCell>Vacation</TableCell>
-                  </TableRow>
+                  {skills2.map(([name, years], index) => (
+                    <TableRow key={index}>
+                      <TableCell className="text-left text-lg">
+                        {name}
+                      </TableCell>
+                      <TableCell className="text-right">{years}</TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </AccordionItem>
           </Accordion>
         </div>
       </div>
-      <div className="pt-10 pb-20">
+      <div className="pt-10 ">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
           <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full  ">
-            Front-End
+            Cybersecurity
           </h1>
           <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
-            I built multiple full-stack application using JavaScript
-            meta-frameworks such as Next.js, and Nuxt.js, I am currently
-            expanding
+            With a keen interest in cybersecurity, I have gained experience in
+            various aspects of securing systems and data. My skills include
+            implementing security measures, conducting vulnerability
+            assessments, and staying vigilant against potential threats. I am
+            committed to following best practices and staying informed about the
+            latest security trends to ensure the integrity and confidentiality
+            of information assets.
           </p>
         </div>
         <div className="pt-4 max-w-[700px] mx-auto">
@@ -170,31 +172,18 @@ export default function AboutPage() {
             <AccordionItem key="1" aria-label="Skills" title="Skills">
               <Table aria-label="Example static collection table">
                 <TableHeader>
-                  <TableColumn>NAME</TableColumn>
-                  <TableColumn>ROLE</TableColumn>
-                  <TableColumn>STATUS</TableColumn>
+                  <TableColumn className="text-left">NAME</TableColumn>
+                  <TableColumn className="text-right">YEARS</TableColumn>
                 </TableHeader>
                 <TableBody>
-                  <TableRow key="1">
-                    <TableCell>Tony Reichert</TableCell>
-                    <TableCell>CEO</TableCell>
-                    <TableCell>Active</TableCell>
-                  </TableRow>
-                  <TableRow key="2">
-                    <TableCell>Zoey Lang</TableCell>
-                    <TableCell>Technical Lead</TableCell>
-                    <TableCell>Paused</TableCell>
-                  </TableRow>
-                  <TableRow key="3">
-                    <TableCell>Jane Fisher</TableCell>
-                    <TableCell>Senior Developer</TableCell>
-                    <TableCell>Active</TableCell>
-                  </TableRow>
-                  <TableRow key="4">
-                    <TableCell>William Howard</TableCell>
-                    <TableCell>Community Manager</TableCell>
-                    <TableCell>Vacation</TableCell>
-                  </TableRow>
+                  {skills3.map(([name, years], index) => (
+                    <TableRow key={index}>
+                      <TableCell className="text-left text-lg">
+                        {name}
+                      </TableCell>
+                      <TableCell className="text-right">{years}</TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             </AccordionItem>
