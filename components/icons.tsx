@@ -180,7 +180,7 @@ export const HeartFilledIcon = ({
 );
 
 export const NextIcon: React.FC<IconSvgProps> = ({
-  size = 30,
+  size = 24,
   width,
   height,
   ...props

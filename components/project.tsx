@@ -29,8 +29,8 @@ export default function Project(data: ProjectProps) {
     return techIconsArray;
   }
   return (
-    <div className="pb-8">
-      <div className="mx-auto flex max-w-[700px] pb-2 items-center justify-evenly  align-middle py-16">
+    <div className="pb-8 py-4 md:py-14">
+      <div className="mx-auto flex max-w-[700px] pb-2 items-center justify-evenly  align-middle ">
         <div className="flex flex-col items-center ">
           <div className=" ">
             <div className="flex w-full flex-col justify-center      text-center text-xl md:text-3xl">
@@ -73,7 +73,7 @@ export default function Project(data: ProjectProps) {
           )}
         </div>
       </div>
-      <div className="mx-auto max-w-[600px] py-2 text-sm leading-6 md:leading-7 text-left px-4">
+      <div className="mx-auto max-w-[600px] pt-4  py-2 text-sm leading-6 md:leading-7 text-left px-4">
         {data.summary}
       </div>
     </div>
