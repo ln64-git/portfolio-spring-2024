@@ -34,7 +34,7 @@ export default function Project(data: ProjectProps) {
   }
 
   return (
-    <div className="pb-8 py-4 md:py-14">
+    <div className="pb-8 py-4 md:py-8">
       <div className="mx-auto flex max-w-[700px]  pb-2 items-center justify-evenly align-middle">
         <div className="flex w-1/2  flex-col items-center mx-auto">
           <div className="">
@@ -59,7 +59,7 @@ export default function Project(data: ProjectProps) {
           </div>
         </div>
       </div>
-      <div className="mx-auto my-6 flex max-w-[475px] items-center justify-center align-middle  text-center">
+      <div className="mx-auto my-2 md:my-6 flex max-w-[475px] items-center justify-center align-middle  text-center">
         <div className="flex h-full w-full items-center justify-between ">
           <Link
             href={data.githubUrl}
