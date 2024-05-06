@@ -21,14 +21,18 @@ export default function Project(data: ProjectProps) {
         {tech === "next" ? (
           <NextIcon width={40} height={40} />
         ) : (
-          <img src={`/${tech}.svg`} alt={tech} className="w-40 md:w-80" />
+          <Image
+            radius="none"
+            src={`/${tech}.svg`}
+            alt={tech}
+            className="w-40 md:w-80"
+          />
         )}
       </div>
     ));
-  
     return <div className="flex">{techIconsArray}</div>;
   }
-  
+
   return (
     <div className="pb-8 py-4 md:py-14">
       <div className="mx-auto flex max-w-[700px]  pb-2 items-center justify-evenly align-middle">
