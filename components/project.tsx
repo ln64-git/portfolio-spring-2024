@@ -16,7 +16,7 @@ export default function Project(data: ProjectProps) {
     const techIconsArray = data.techArray.map((tech, index) => (
       <div
         key={index}
-        className="flex h-8 w-8 items-center justify-center align-middle "
+        className="flex h-8 w-8 items-center justify-center align-middle"
       >
         {tech === "next" ? (
           <NextIcon width={40} height={40} />
@@ -25,9 +25,10 @@ export default function Project(data: ProjectProps) {
         )}
       </div>
     ));
-
-    return techIconsArray;
+  
+    return <div className="flex">{techIconsArray}</div>;
   }
+  
   return (
     <div className="pb-8 py-4 md:py-14">
       <div className="mx-auto flex max-w-[700px]  pb-2 items-center justify-evenly align-middle">
