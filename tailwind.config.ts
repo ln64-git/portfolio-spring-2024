@@ -32,26 +32,28 @@ module.exports = {
     themes: {
       light: {
         colors: {
-          background: "#97a2c6ff", // Example: Light yellow color
+          background: "#97a2c6ff",
           content1: "#9ba3c7ff",
-          default: "#2d2d2d",
+          default: "#4f4f4f",
+          secondary: "#4f539d",
           primary: {
             //... 50 to 900
             "50": "#9ba3c7ff",
             "100": "#aeb7deff",
-            foreground: "#7d3030",
+            foreground: "#2d2d2d",
             DEFAULT: "#2d2d2d",
           },
         },
       },
       dark: {
         colors: {
+          secondary: "#7f85c2",
+          default: "#a9a9a9",
           primary: {
             //... 50 to 900
             "50": "#18181B",
-            "100": "#27272c",
-            foreground: "#7d3030",
-            DEFAULT: "#9c9c9c",
+            "100": "#d0d0d0",
+            DEFAULT: "#d0d0d0",
           },
         },
       },

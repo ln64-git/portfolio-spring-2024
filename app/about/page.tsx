@@ -37,8 +37,8 @@ export default function AboutPage() {
           />
         </div>
         <div className=" flex items-center justify-center">
-          <div className="ml-2 flex flex-col items-center ">
-            <div className="inline text-2xl sm:text-3xl md:text-4xl text-left pb-1 w-full px-4 md:px-0">
+          <div className="  ml-2 flex flex-col items-center ">
+            <div className="inline text-xl sm:text-3xl md:text-4xl text-left pb-1 w-full px-4 md:px-0">
               {name}
             </div>
 

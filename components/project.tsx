@@ -30,34 +30,36 @@ export default function Project(data: ProjectProps) {
   }
   return (
     <div className="pb-8 py-4 md:py-14">
-      <div className="mx-auto flex max-w-[700px] pb-2 items-center justify-evenly  align-middle ">
-        <div className="flex flex-col items-center ">
-          <div className=" ">
-            <div className="flex w-full flex-col justify-center      text-center text-xl md:text-3xl">
+      <div className="mx-auto flex max-w-[700px]  pb-2 items-center justify-evenly align-middle">
+        <div className="flex w-1/2  flex-col items-center mx-auto">
+          <div className="">
+            <div className="flex w-full flex-col justify-center text-center text-xl md:text-3xl">
               {data.name}
             </div>
-            <div className=" text-center text-sm md:text-xl font-light ">
+            <div className="text-center  my-2 text-sm md:text-xl font-light">
               {data.date}
             </div>
           </div>
-          <div className="flex w-1/2 items-center justify-center gap-1 ">
+          <div className="flex w-1/2 items-center justify-center gap-1">
             <TechIcons />
           </div>
         </div>
-        <div className="pb-2 ">
-          <Image
-            src={"/" + data.image + ".png"}
-            alt={data.image}
-            className="w-40 md:w-80"
-          />
+        <div className="w-1/2  flex  justify-evenly  mx-auto">
+          <div className=" mx-auto ">
+            <Image
+              src={"/" + data.image + ".png"}
+              alt={data.image}
+              className=" md:w-80"
+            />
+          </div>
         </div>
       </div>
-      <div className="mx-auto flex max-w-[500px] items-center justify-center align-middle  text-center">
-        <div className="flex h-full w-full items-center justify-center my-2">
+      <div className="mx-auto my-2 flex max-w-[475px] items-center justify-center align-middle  text-center">
+        <div className="flex h-full w-full items-center justify-between ">
           <Link
             href={data.githubUrl}
             target="_blank"
-            className=" text-xl md:text-xl px-12 md:px-14"
+            className=" text-xl w-1/2 text-secondary md:text-xl px-12 md:px-8"
           >
             Github
           </Link>
@@ -65,14 +67,14 @@ export default function Project(data: ProjectProps) {
             <Link
               href={data.demoUrl}
               target="_blank"
-              className="inline text-xl md:text-xl px-12 md:px-8"
+              className="inline w-1/2 text-secondary text-xl md:text-xl px-12 md:px-8"
             >
               Demo
             </Link>
           )}
         </div>
       </div>
-      <div className="mx-auto max-w-[600px] pt-4  py-2 text-sm leading-6 md:leading-7 text-left ">
+      <div className="mx-auto max-w-[600px]   py-2 text-sm leading-6 md:leading-7 text-left ">
         {data.summary}
       </div>
     </div>
