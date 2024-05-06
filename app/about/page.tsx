@@ -38,16 +38,16 @@ export default function AboutPage() {
         </div>
         <div className=" flex items-center justify-center">
           <div className="ml-2 flex flex-col items-center ">
-            <div className="inline text-3xl md:text-5xl text-left pb-1 w-full px-4 md:px-0">
+            <div className="inline text-2xl sm:text-4xl md:text-5xl text-left pb-1 w-full px-4 md:px-0">
               {name}
             </div>
 
-            <div className="leading-6 md:leading-7 px-auto mx-auto max-w-[400px] text-sm px-4 md:px-0 sm:text-lg text-left justify-center">
+            <div className="px-auto mx-auto max-w-[400px] text-sm px-4 md:px-0 sm:text-lg text-left justify-center">
               <ul>
                 {info.map((element, index) => (
                   <li
                     key={index}
-                    className="text-xl my-2  font-light text-left"
+                    className="text-xl my-1 md:my-2  font-light text-left"
                   >
                     {element}
                   </li>
