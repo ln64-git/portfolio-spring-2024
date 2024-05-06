@@ -38,7 +38,7 @@ export default function AboutPage() {
         </div>
         <div className=" flex items-center justify-center">
           <div className="ml-2 flex flex-col items-center ">
-            <div className="inline text-2xl sm:text-4xl md:text-5xl text-left pb-1 w-full px-4 md:px-0">
+            <div className="inline text-2xl sm:text-3xl md:text-4xl text-left pb-1 w-full px-4 md:px-0">
               {name}
             </div>
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
                 {info.map((element, index) => (
                   <li
                     key={index}
-                    className="text-xl  md:my-2  font-light text-left"
+                    className="sm:text-md md:text-xl md:my-2 font-light text-left"
                   >
                     {element}
                   </li>

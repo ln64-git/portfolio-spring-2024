@@ -35,17 +35,23 @@ module.exports = {
           background: "#97a2c6ff", // Example: Light yellow color
           content1: "#9ba3c7ff",
           default: "#2d2d2d",
-          // overlay: "#00ee30", // Example: Light yellow color
-          // content2: "#ee00ae",
-          // content3: " #7fee00",
-          // default: " #ee0000",
-          // content4: " #ee00ae",
-
-
           primary: {
             //... 50 to 900
+            "50": "#9ba3c7ff",
+            "100": "#aeb7deff",
             foreground: "#7d3030",
             DEFAULT: "#2d2d2d",
+          },
+        },
+      },
+      dark: {
+        colors: {
+          primary: {
+            //... 50 to 900
+            "50": "#18181B",
+            "100": "#27272c",
+            foreground: "#7d3030",
+            DEFAULT: "#9c9c9c",
           },
         },
       },

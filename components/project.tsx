@@ -46,7 +46,6 @@ export default function Project(data: ProjectProps) {
         </div>
         <div className="pb-2 ">
           <Image
-            radius="sm"
             src={"/" + data.image + ".png"}
             alt={data.image}
             className="w-40 md:w-80"
@@ -58,7 +57,7 @@ export default function Project(data: ProjectProps) {
           <Link
             href={data.githubUrl}
             target="_blank"
-            className=" text-xl md:text-3xl px-12 md:px-14"
+            className=" text-xl md:text-xl px-12 md:px-14"
           >
             Github
           </Link>
@@ -66,7 +65,7 @@ export default function Project(data: ProjectProps) {
             <Link
               href={data.demoUrl}
               target="_blank"
-              className="inline text-xl md:text-3xl px-12 md:px-8"
+              className="inline text-xl md:text-xl px-12 md:px-8"
             >
               Demo
             </Link>
