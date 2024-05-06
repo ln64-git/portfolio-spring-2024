@@ -73,7 +73,7 @@ export default function Project(data: ProjectProps) {
           )}
         </div>
       </div>
-      <div className="mx-auto max-w-[600px] pt-4  py-2 text-sm leading-6 md:leading-7 text-left px-4">
+      <div className="mx-auto max-w-[600px] pt-4  py-2 text-sm leading-6 md:leading-7 text-left ">
         {data.summary}
       </div>
     </div>

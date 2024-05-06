@@ -47,7 +47,7 @@ export default function AboutPage() {
                 {info.map((element, index) => (
                   <li
                     key={index}
-                    className="text-xl my-1 md:my-2  font-light text-left"
+                    className="text-xl  md:my-2  font-light text-left"
                   >
                     {element}
                   </li>
@@ -58,13 +58,13 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="pt-10">
+      <div className="pt-10 ">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
           <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full ">
             Front-End
           </h1>
 
-          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md sm:text-xl items-center justify-center max-w-[700px] ">
+          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
             I built multiple full-stack application using JavaScript
             meta-frameworks such as Next.js, and Nuxt.js, I am currently
             expanding
@@ -112,7 +112,7 @@ export default function AboutPage() {
           <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full ">
             Front-End
           </h1>
-          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md sm:text-xl items-center justify-center max-w-[700px] ">
+          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
             I built multiple full-stack application using JavaScript
             meta-frameworks such as Next.js, and Nuxt.js, I am currently
             expanding
@@ -159,7 +159,7 @@ export default function AboutPage() {
           <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full  ">
             Front-End
           </h1>
-          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md sm:text-xl items-center justify-center max-w-[700px] ">
+          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
             I built multiple full-stack application using JavaScript
             meta-frameworks such as Next.js, and Nuxt.js, I am currently
             expanding
