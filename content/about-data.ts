@@ -19,7 +19,8 @@ const aboutData = {
     ['WordPress', 1]
   ],
   skills2: [
-    ['Rust', 1],
+    ['Go', 1],
+    ['Rust', 2],
     ['Java', 3],
     ['Spring Boot', 3],
     ['PostgreSQL', 3],
