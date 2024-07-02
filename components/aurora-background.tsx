@@ -17,12 +17,13 @@ export const AuroraBackground = ({
     <div className="relative h-full">
       <div
         className={cn(
-          "absolute top-0 left-0 w-full h-[50vh] transition-bg",
+          "absolute  flex justify-center top-0 left-0 w-full h-[400px] transition-bg",
           className
         )}
         {...props}
       >
-        <div className="absolute  mx-auto max-w-[900px] mt-16 h-[400px] rounded-lg inset-0 overflow-hidden">
+
+        <div className="absolute  mx-auto max-w-[900px] mt-16  rounded-lg inset-0 overflow-hidden">
           <div
             className={cn(
               `
@@ -46,6 +47,7 @@ export const AuroraBackground = ({
             )}
           ></div>
         </div>
+
       </div>
       {children}
     </div>

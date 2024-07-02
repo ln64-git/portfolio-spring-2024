@@ -26,28 +26,28 @@ export default function AboutPage() {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
   return (
-    <div id="About" className=" w-full mx-auto max-w-[1250px]  py-2  ">
-      <div className="px-6 mx-auto w-full flex max-w-[700px] items-center justify-around p-2">
+    <div id="About" className=" w-full mx-auto max-w-[1250px]  ">
+      <div className="px-6  mx-auto w-full flex max-w-[700px] items-center justify-around h-[320px] ">
         <div className="flex items-center justify-center">
           <Image
             width={150}
             alt="NextUI hero Image"
             src="https://i.imgur.com/PbMQHyX.jpeg"
-            // className="h-[200px] w-[130px]"
+          // className="h-[200px] w-[130px]"
           />
         </div>
         <div className=" flex items-center justify-center">
           <div className="  ml-2 flex flex-col items-center ">
-            <div className="inline text-xl sm:text-3xl md:text-4xl text-left pb-1 w-full px-4 md:px-0">
+            <div className="inline text-3xl  md:text-3xl text-left pb-1 w-full px-4 md:px-0">
               {name}
             </div>
 
-            <div className="px-auto mx-auto max-w-[400px] text-sm px-4 md:px-0 sm:text-lg text-left justify-center">
+            <div className="px-auto mx-auto max-w-[400px]  w-full text-sm px-4 md:px-0 sm:text-lg text-left justify-center">
               <ul>
                 {info.map((element, index) => (
                   <li
                     key={index}
-                    className="sm:text-md md:text-xl md:my-2 font-light text-left"
+                    className="text-sm my-2 font-light text-left"
                   >
                     {element}
                   </li>
@@ -152,7 +152,7 @@ export default function AboutPage() {
           </Accordion>
         </div>
       </div>
-      <div className="pt-10 ">
+      <div className="py-10 ">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
           <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full  ">
             Cybersecurity
