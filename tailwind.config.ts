@@ -32,11 +32,14 @@ module.exports = {
     themes: {
       light: {
         colors: {
-          background: "#a8bff1ff",
-          content1: "#9db6edff",
-          default: "#9db6edff",
-          secondary: "#4f539d",
+          background: "#F4F0E8",
+          content1: "#e8e1d4",
+          default: "#4f4f4f",
+          secondary: "#d85626",
           primary: {
+            //... 50 to 900
+            "50": "#e8e1d4",
+            "100": "#e8e1d4",
             foreground: "#2d2d2d",
             DEFAULT: "#2d2d2d",
           },
