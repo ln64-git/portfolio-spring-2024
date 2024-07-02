@@ -23,7 +23,7 @@ export const AuroraBackground = ({
         {...props}
       >
 
-        <div className="absolute  mx-auto max-w-[900px] mt-16  rounded-lg inset-0 overflow-hidden">
+        <div className="absolute  mx-auto max-w-[1200px] mt-16  rounded-lg inset-0 overflow-hidden">
           <div
             className={cn(
               `
@@ -39,7 +39,7 @@ export const AuroraBackground = ({
             after:dark:[background-image:var(--dark-gradient),var(--aurora)]
             after:[background-size:200%,_100%] 
             after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
-            pointer-events-none
+            pointer-events-none 
             absolute -inset-[10px] opacity-50 will-change-transform`,
 
               showRadialGradient &&
