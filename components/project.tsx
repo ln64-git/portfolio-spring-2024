@@ -16,7 +16,7 @@ export default function Project(data: ProjectProps) {
     const techIconsArray = data.techArray.map((tech, index) => (
       <div
         key={index}
-        className="flex h-8 w-8 items-center justify-center align-middle"
+        className="flex h-8  w-8 items-center justify-center align-middle"
       >
         {tech === "next" ? (
           <NextIcon width={40} height={40} />
@@ -35,8 +35,8 @@ export default function Project(data: ProjectProps) {
 
   return (
     <div className="pb-8 py-4 md:py-8">
-      <div className="mx-auto flex max-w-[700px]  pb-2 items-center justify-evenly align-middle">
-        <div className="flex w-1/2  flex-col items-center mx-auto">
+      <div className="mx-auto   flex max-w-[700px]   items-center justify-evenly  align-middle">
+        <div className="flex  w-1/2  flex-col items-center mx-auto">
           <div className="">
             <div className="flex w-full flex-col justify-center text-center text-xl md:text-2xl mx-2 max-w-[200px]">
               {data.name}
@@ -59,7 +59,7 @@ export default function Project(data: ProjectProps) {
           </div>
         </div>
       </div>
-      <div className="mx-auto my-2 md:my-6 flex max-w-[475px] items-center justify-center align-middle  text-center">
+      <div className="mx-auto  my-5 md:my-6 flex max-w-[475px] items-center justify-center align-middle  text-center">
         <div className="flex h-full w-full items-center justify-between ">
           <Link
             href={data.githubUrl}
@@ -79,7 +79,7 @@ export default function Project(data: ProjectProps) {
           )}
         </div>
       </div>
-      <div className="mx-auto max-w-[600px] px-2  py-2 text-sm leading-6 md:leading-7 text-left ">
+      <div className="mx-auto max-w-[600px] px-2  text-sm leading-6 md:leading-7 text-left ">
         {data.summary}
       </div>
     </div>
