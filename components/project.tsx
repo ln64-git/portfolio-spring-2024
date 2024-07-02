@@ -38,7 +38,7 @@ export default function Project(data: ProjectProps) {
       <div className="mx-auto flex max-w-[700px]  pb-2 items-center justify-evenly align-middle">
         <div className="flex w-1/2  flex-col items-center mx-auto">
           <div className="">
-            <div className="flex w-full flex-col justify-center text-center text-xl md:text-3xl">
+            <div className="flex w-full flex-col justify-center text-center text-xl md:text-2xl mx-2 max-w-[200px]">
               {data.name}
             </div>
             <div className="text-center  my-2 text-sm md:text-xl font-light">
