@@ -14,17 +14,16 @@ export const AuroraBackground = ({
   ...props
 }: AuroraBackgroundProps) => {
   return (
-    <main>
+    <div className="relative h-full">
       <div
         className={cn(
-          "relative flex flex-col  h-[100vh]   dark:bg-zinc-950   transition-bg",
+          "absolute top-0 left-0 w-full h-[50vh] transition-bg",
           className
         )}
         {...props}
       >
-        <div className="absolute inset-0  ">
+        <div className="absolute mx-auto w-[900px] mt-16 h-[400px] rounded-lg inset-0 overflow-hidden">
           <div
-            //   I'm sorry but this is what peak developer performance looks like // trigger warning
             className={cn(
               `
             [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
@@ -43,12 +42,12 @@ export const AuroraBackground = ({
             absolute -inset-[10px] opacity-50 will-change-transform`,
 
               showRadialGradient &&
-                `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
+              `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
             )}
           ></div>
         </div>
-        {children}
       </div>
-    </main>
+      {children}
+    </div>
   );
 };

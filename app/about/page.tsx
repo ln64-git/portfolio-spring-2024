@@ -33,7 +33,7 @@ export default function AboutPage() {
             width={150}
             alt="NextUI hero Image"
             src="https://i.imgur.com/PbMQHyX.jpeg"
-            className=""
+            // className="h-[200px] w-[130px]"
           />
         </div>
         <div className=" flex items-center justify-center">

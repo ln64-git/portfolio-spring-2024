@@ -10,7 +10,7 @@ import { AuroraBackground } from "@/components/aurora-background";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import { motion } from "framer-motion";
 export default function Home() {
-  return (
+  return (<div className="mt-1 h-full">
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-2xl text-center justify-center">
         {/* <h1 className={title({ color: "violet" })}>Innovative&nbsp;</h1>
@@ -40,32 +40,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 4, duration: 1 }}
-        className="flex gap-3"
-      >
-        {/* <Link
-          isExternal
-          href={siteConfig.links.discord}
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-        >
-          Chat with me!
-        </Link> */}
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </motion.div>
     </section>
-  );
+
+  </div >);
 }
