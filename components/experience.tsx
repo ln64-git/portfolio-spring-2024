@@ -43,8 +43,8 @@ export default function Experience(data: JobProps) {
   };
 
   return (
-    <div className="mx-auto max-w-[700px] py-2 md:py-2">
-      <div className="flex h-[40px] items-center justify-center text-2xl md:text-3xl my-2 md:my-4  ">
+    <div className="mx-auto  max-w-[700px] py-2 md:py-2">
+      <div className="flex h-[40px]  my-2 items-center justify-center text-2xl md:text-3xl  md:my-4  ">
         {data.role}
       </div>
 

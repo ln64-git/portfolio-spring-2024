@@ -13,7 +13,7 @@ interface ExperienceItem {
 
 export default function ExperiencePage() {
   return (
-    <div className="mx-auto max-w-[1250px]  px-6  ">
+    <div className="mx-auto max-w-[1250px] font-montserrat px-6  ">
       {experienceData.map((experience: ExperienceItem, index: number) => (
         <Experience
           key={index}

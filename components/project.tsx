@@ -34,11 +34,11 @@ export default function Project(data: ProjectProps) {
   }
 
   return (
-    <div className=" py-4 md:py-12">
-      <div className="mx-auto flex max-w-[700px]  py-6 items-center justify-evenly  align-middle">
+    <div className=" py-8 md:py-12">
+      <div className="mx-auto flex max-w-[700px]  md:py-6 items-center justify-evenly  align-middle">
         <div className="flex  w-1/2  flex-col items-center mx-auto">
           <div className="">
-            <div className="flex w-full flex-col justify-center text-center text-xl md:text-2xl mx-2 max-w-[200px]">
+            <div className="flex w-full flex-col justify-center text-center text-xl md:text-2xl  max-w-[200px]">
               {data.name}
             </div>
             <div className="text-center  my-2 text-sm md:text-xl font-light">
@@ -59,7 +59,7 @@ export default function Project(data: ProjectProps) {
           </div>
         </div>
       </div>
-      <div className="mx-auto  my-5 md:my-8  flex max-w-[475px] items-center justify-center align-middle  text-center">
+      <div className="mx-auto md:pt-4 my-4 md:my-8  flex max-w-[475px] items-center justify-center align-middle  text-center">
         <div className="flex h-full w-full items-center justify-between ">
           <Link
             href={data.githubUrl}

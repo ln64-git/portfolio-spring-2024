@@ -26,7 +26,7 @@ export default function AboutPage() {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
   return (
-    <div id="About" className=" w-full mx-auto max-w-[1250px]  ">
+    <div id="About" className=" w-full mx-auto max-w-[1250px] font-montserrat ">
       <div className="px-6  mx-auto w-full flex max-w-[700px] items-center  h-[320px] md:h-[405px]">
         <div className="flex  w-2/6 items-center justify-center">
           <Image
@@ -60,19 +60,19 @@ export default function AboutPage() {
 
       <div className="pt-4 ">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
-          <h1 className="max-w-[700px] inline font-semibold text-4xl md:text-3xl text-left  w-full ">
+          <h1 className="max-w-[700px] inline  text-2xl md:text-3xl text-left  w-full ">
             About me
           </h1>
-          <p className="pb-4 leading-7 md:leading-9 px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
+          <p className="pb-4 leading-7 md:leading-8 text-sm px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
             Innovative software developer with a foundation in cybersecurity, frontend, and backend development.
             Leveraging technology to overcome visual impairment, bringing a unique perspective and strong problem-solving
             skills to create accessible, secure, and efficient solutions.
           </p>
-          <h1 className="max-w-[700px] mt-4 inline font-semibold text-2xl md:text-3xl text-left  w-full ">
+          <h1 className="max-w-[700px] mt-4 inline  text-xl md:text-2xl text-left  w-full ">
             Front-End
           </h1>
 
-          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
+          <p className="leading-7 md:leading-8 text-sm px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
             I have built multiple full-stack applications using modern
             JavaScript frameworks and libraries. My front-end skills span across
             a wide range of technologies, enabling me to create responsive,
@@ -110,10 +110,10 @@ export default function AboutPage() {
 
       <div className="pt-10">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
-          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full ">
+          <h1 className="max-w-[700px] inline  text-xl md:text-2xl text-left  w-full ">
             Back-End
           </h1>
-          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
+          <p className="leading-7 md:leading-8 text-sm px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
             On the server-side, I have experience working with diverse
             technologies and frameworks to develop robust, scalable, and secure
             back-end systems. I strive to design efficient and maintainable
@@ -150,10 +150,10 @@ export default function AboutPage() {
       </div>
       <div className="py-10 ">
         <div className="px-4 pb-4 mx-auto w-full max-w-[800px] items-center justify-around flex flex-col">
-          <h1 className="max-w-[700px] inline font-semibold text-2xl md:text-3xl text-left  w-full  ">
+          <h1 className="max-w-[700px] inline  text-xl md:text-2xl text-left  w-full  ">
             Cybersecurity
           </h1>
-          <p className="leading-7 md:leading-9 px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
+          <p className="leading-7 md:leading-8 text-sm px-auto mx-auto pt-2 text-left text-md items-center justify-center max-w-[700px] ">
             With a keen interest in cybersecurity, I have gained experience in
             various aspects of securing systems and data. My skills include
             implementing security measures, conducting vulnerability
