@@ -34,9 +34,9 @@ export const TextGenerateEffect = ({
   const wordClasses = (index: number) => {
     if (index === 0) {
       return actionWordOneClasses;
-    } else if (index === 6) {
+    } else if (index === 7) {
       return actionWordTwoClasses;
-    } else if (index === 8 || index === 9) {
+    } else if (index === 9 || index === 10) {
       return actionWordThreeClasses;
     } else {
       return cn(title(), "opacity-0");
@@ -68,7 +68,7 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      <div className="mt-4">
+      <div className="mt-4 ">
         <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
           {renderWords()}
         </div>

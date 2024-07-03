@@ -17,7 +17,7 @@ export default function Home() {
         <TextGenerateEffect
           className={title()}
           words={
-            "Innovative software developer with a foundation in cybersecurity, and Full-Stack Development."
+            "Innovative software developer with a foundation in Cybersecurity, and Full-Stack Development."
           }
         />
         {/* <h1 className={title({ color: "cyan" })}> frontend, </h1> */}
@@ -27,9 +27,9 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 3.5, duration: 1 }}
         >
-          <h2 className={subtitle({ class: "mt-4" })}>
+          {/* <h2 className={subtitle({ class: "mt-4" })}>
             Beautiful, efficient and accessible applications.
-          </h2>
+          </h2> */}
         </motion.div>
       </div>
 
