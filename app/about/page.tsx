@@ -64,13 +64,9 @@ export default function AboutPage() {
             About me
           </h1>
           <p className="pb-4 leading-7 md:leading-9 px-auto mx-auto pt-2 text-left  text-md items-center justify-center max-w-[700px] ">
-            Innovative software developer with a strong background in full-stack
-            web development and cybersecurity. Passionate about building
-            efficient, accessible, and user-friendly applications that deliver
-            high-quality results. Dedicated to continuous learning, staying
-            up-to-date with the latest industry trends, and thriving in
-            collaborative environments committed to achieving company goals
-            through teamwork and innovative solutions.
+            Innovative software developer with a foundation in cybersecurity, frontend, and backend development.
+            Leveraging technology to overcome visual impairment, bringing a unique perspective and strong problem-solving
+            skills to create accessible, secure, and efficient solutions.
           </p>
           <h1 className="max-w-[700px] mt-4 inline font-semibold text-2xl md:text-3xl text-left  w-full ">
             Front-End
