@@ -27,8 +27,8 @@ export default function AboutPage() {
 
   return (
     <div id="About" className=" w-full mx-auto max-w-[1250px]  ">
-      <div className="px-6  mx-auto w-full flex max-w-[700px] items-center justify-around h-[320px] ">
-        <div className="flex items-center justify-center">
+      <div className="px-6  mx-auto w-full flex max-w-[700px] items-center  h-[320px] md:h-[405px]">
+        <div className="flex  w-2/6 items-center justify-center">
           <Image
             width={150}
             alt="NextUI hero Image"
@@ -36,8 +36,8 @@ export default function AboutPage() {
           // className="h-[200px] w-[130px]"
           />
         </div>
-        <div className=" flex items-center justify-center">
-          <div className="  ml-2 flex flex-col items-center ">
+        <div className=" flex items-center  justify-center">
+          <div className="  ml-2 md:ml-12 flex flex-col items-center ">
             <div className="inline text-3xl  md:text-3xl text-left pb-1 w-full px-4 md:px-0">
               {name}
             </div>
