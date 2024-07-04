@@ -4,7 +4,11 @@ const aboutData = {
   info: ['June 13th 1996', 'Cincinnati, Ohio'],
 
   skills1: [
+    ['HTML', 4],
+    ['CSS', 4],
     ['JavaScript', 4],
+    ['Tailwind', 3],
+    ['Responsive Design', 3],
     ['React.js', 3],
     ['Next.js', 3],
     ['Vue.js', 3],
@@ -12,26 +16,20 @@ const aboutData = {
     ['Jest', 3],
     ['Redux', 2],
     ['Prisma', 2],
-    ['HTML', 4],
-    ['CSS', 4],
-    ['Tailwind', 3],
-    ['Responsive Design', 3],
     ['WordPress', 1]
   ],
   skills2: [
-    ['Go', 1],
-    ['Rust', 2],
-    ['Java', 3],
+    ['Java', 4],
     ['Spring Boot', 3],
     ['PostgreSQL', 3],
-    ['RESTful', 3],
-    ['APIs', 3],
-    ['E/R diagrams', 3],
+    ['RESTful APIs', 3],
     ['Unit Testing', 3],
     ['Integration Testing', 3],
-    ['Git', 1],
-    ['Linux', 1],
-    ['Unix', 1]
+    ['Git', 3],
+    ['Linux', 3],
+    ['Go', 1],
+    ['Rust', 2],
+    ['E/R diagrams', 2],
   ],
   skills3: [
     ['Network Security', 1],
@@ -46,7 +44,7 @@ const aboutData = {
     ['Security Frameworks and Controls', 1]
   ],
   summary:
-    'Innovative software developer with experience in cybersecurity, full-stack development. Adept at leveraging technology to overcome visual impairment, bringing a unique perspective and strong problem-solving skills to create accessible, secure, and efficient solutions.'
+    'Innovative software developer with a foundation in cybersecurity, frontend, and backend development. Leveraging technology to overcome visual impairment, bringing a unique perspective and strong problem-solving skills to create accessible, secure, and efficient solutions.'
 };
 
 export default aboutData;

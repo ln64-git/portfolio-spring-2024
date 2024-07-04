@@ -52,6 +52,7 @@ module.exports = {
         colors: {
           background: "#141312",
           secondary: "#c35933",
+          content1: "#1e1b1b",
           default: "#a9a9a9",
           primary: {
             //... 50 to 900
