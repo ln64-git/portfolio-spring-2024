@@ -56,8 +56,8 @@ module.exports = {
           default: "#a9a9a9",
           primary: {
             //... 50 to 900
-            "50": "#18181B",
-            "100": "#242429",
+            "50": "#1e1b1b",
+            "100": "#1e1b1b",
             DEFAULT: "#d0d0d0",
           },
         },

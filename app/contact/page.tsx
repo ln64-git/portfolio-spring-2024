@@ -33,7 +33,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="mx-auto max-w-[500px] px-4 pb-10 font-montserrat ">
+    <div className="mx-auto max-w-[500px] px-4 py-6 font-montserrat ">
       <div className="mx-auto flex flex-col justify-center align-middle ">
         <div className="flex w-full flex-col items-center justify-center  space-y-2 p-4 align-middle">
           <div className="text-3xl ">{name}</div>
