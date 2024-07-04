@@ -50,7 +50,8 @@ module.exports = {
       },
       dark: {
         colors: {
-          secondary: "#7f85c2",
+          background: "#141312",
+          secondary: "#c35933",
           default: "#a9a9a9",
           primary: {
             //... 50 to 900

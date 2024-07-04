@@ -70,7 +70,7 @@ export default function Home() {
                   <p className="flex-grow">{experience.skills}</p>
                   <p className="ml-4 flex-shrink-0">{experience.date}</p>
                 </div>
-                <p className="text-sm  leading-7 md:text-md md:leading-9">{experience.summary}</p>
+                <p className="text-sm  leading-7 md:text-md md:leading-8">{experience.summary}</p>
               </div>
             ))}
           </div>
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="pt-10 pb-20 pl-10 text-sm md:text-md">
           <p className="text-sm md:text-lg">EDUCATION & CERTIFICATES</p>
           <p>2022 - Graduate Certificate in Full Stack Java Development, Tech Elevator</p>
-          <p>2023 - Graduate Certificate in Cyber-Security, Google </p>
+          <p>2023 - Graduate Certificate in Cybersecurity, Google </p>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ export const topSkills = [
 
 export const homeData = [
   {
-    category: 'TECH EXPERIENCE',
+    category: 'APPLICATION EXPERIENCE',
     experiences: [
       {
         name: "Voxctl TTS",
