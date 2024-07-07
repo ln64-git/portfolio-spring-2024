@@ -32,15 +32,13 @@ const aboutData = {
     ['E/R diagrams', 2],
   ],
   skills3: [
+    ['Python', 4],
     ['Network Security', 1],
     ['Incident Response', 1],
     ['Vulnerability Assessment', 1],
     ['Threat Analysis', 1],
     ['Security Information and Event Management (SIEM)', 1],
     ['Intrusion Detection Systems', 1],
-    ['Linux and Command Line Interface (CLI)', 1],
-    ['SQL and Database Management', 1],
-    ['Python Programming for Cybersecurity', 1],
     ['Security Frameworks and Controls', 1]
   ],
   summary:
