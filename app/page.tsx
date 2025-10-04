@@ -29,9 +29,9 @@ export default function Home() {
   ];
   
   return (
-        <div className="relative mx-auto max-w-6xl font-montserrat py-8 px-8">
+        <div className="relative mx-auto max-w-6xl font-montserrat py-12 px-6 md:px-8">
       {/* Hero Section */}
-      <section className="text-center mb-16 pt-4">
+      <section className="text-center mb-20 pt-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto mb-12 leading-relaxed font-normal mt-6"
+            className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto mb-16 leading-relaxed font-normal mt-8"
           >
             TypeScript, React.js, Next.js, LangChain, RAG pipelines, OpenAI. Building scalable applications that solve complex business problems.
           </motion.p>
@@ -63,7 +63,8 @@ export default function Home() {
               className="group relative px-10 py-3.5 bg-gradient-to-r from-button-primary-500 to-button-primary-700 dark:from-button-primary-dark-500 dark:to-button-primary-dark-700 text-white rounded-xl font-medium transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-[1.02] backdrop-blur-md"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-90" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-90" fill="currentColor" viewBox="0 0 20 20" aria-label="Projects icon">
+                  <title>Projects icon</title>
                   <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clipRule="evenodd" />
                 </svg>
                 View Projects
@@ -75,7 +76,8 @@ export default function Home() {
               className="group relative px-10 py-3.5 bg-white/50 dark:bg-white/5 backdrop-blur-xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 rounded-xl font-medium transition-all duration-500 shadow-md hover:shadow-lg hover:scale-[1.02] hover:bg-white/70 dark:hover:bg-white/10"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-80" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-80" fill="currentColor" viewBox="0 0 20 20" aria-label="Info icon">
+                  <title>Info icon</title>
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                 </svg>
                 Learn More
@@ -86,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Stats Grid */}
-      <section className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-40 max-w-5xl mx-auto">
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-24 max-w-5xl mx-auto">
         {[
           { number: "4+", label: "AI Systems" },
           { number: "95%", label: "Accuracy" },
@@ -99,7 +101,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 + index * 0.1, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-            className="bg-content1/60 backdrop-blur-lg rounded-2xl p-8 transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-102 hover:bg-content1/80"
+            className="bg-content1/60 backdrop-blur-lg rounded-2xl p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-102 hover:bg-content1/80"
           >
             <div className="text-[2.5rem] font-bold text-foreground mb-2 tracking-tight">{stat.number}</div>
             <div className="text-[0.9rem] text-default-600 font-light tracking-[0.05em] uppercase">{stat.label}</div>
@@ -108,12 +110,12 @@ export default function Home() {
       </section>
 
       {/* Project Showcase */}
-      <section className="mb-32">
+      <section className="mb-28">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <h2 className="text-[1.75rem] font-medium text-foreground mb-6 tracking-tight">
             Recent Work
@@ -121,7 +123,7 @@ export default function Home() {
           <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
         </motion.div>
         
-        <div className="grid md:grid-cols-3 gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -130,7 +132,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
               viewport={{ once: true }}
-              className="bg-content1/60 backdrop-blur-lg rounded-2xl p-8 transition-all duration-700 shadow-lg hover:shadow-xl hover:scale-[1.015] hover:bg-content1/80 h-fit"
+              className="bg-content1/60 backdrop-blur-lg rounded-2xl p-6 md:p-8 transition-all duration-700 shadow-lg hover:shadow-xl hover:scale-[1.015] hover:bg-content1/80 h-fit"
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-[1.1rem] font-semibold text-foreground leading-[1.2] tracking-tight flex-1 pr-3">{project.name}</h3>
@@ -159,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Tech Bubble Cloud */}
-      <section className="text-center">
+      <section className="text-center pb-16">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -172,7 +174,7 @@ export default function Home() {
           <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
         </motion.div>
         
-        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-4xl mx-auto">
           {topSkills.map((skill, index) => (
             <motion.div
               key={skill}
