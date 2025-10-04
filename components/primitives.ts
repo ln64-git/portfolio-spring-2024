@@ -7,6 +7,7 @@ export const title = tv({
 			violet: "from-[#f20dea] to-[#9e31e7]",
 			yellow: "from-[#ff8957] to-[#da5945]",
 			blue: "from-[#4d8fda] to-[#0165d8]",
+			tan: "from-[#a87a5a] to-[#8b6349]",
 			cyan: "from-[#00b7fa] to-[#01cfea]",
 			green: "from-[#6FEE8D] to-[#17c964]",
 			pink: "from-[#FF72E1] to-[#F54C7A]",
@@ -30,6 +31,7 @@ export const title = tv({
 				"yellow",
 				"violet",
 				"blue",
+				"tan",
 				"cyan",
 				"green",
 				"pink",
@@ -47,7 +49,7 @@ export const subtitle = tv({
 			true: "!w-full",
 		},
 	},
-  defaultVariants:{
-    fullWidth: true
-  }
+	defaultVariants: {
+		fullWidth: true,
+	},
 });

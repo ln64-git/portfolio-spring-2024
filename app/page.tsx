@@ -1,88 +1,192 @@
 "use client";
-import { useState, useEffect } from "react";
-import { title, subtitle } from "@/components/primitives";
-import { TextGenerateEffect } from "@/components/text-generate-effect";
-import { homeData, topSkills } from "@/content/home-data";
 import { motion } from "framer-motion";
-
-interface Experience {
-  name: string;
-  skills: string;
-  date: string;
-  summary: string;
-}
-
-interface Category {
-  category: string;
-  experiences: Experience[];
-}
+import Link from "next/link";
+import { title } from "@/components/primitives";
+import { TextGenerateEffect } from "@/components/text-generate-effect";
+import { topSkills } from "@/content/home-data";
 
 export default function Home() {
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 640);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Initial check
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const displayedSkills = isSmallScreen ? topSkills.slice(0, 6) : topSkills;
-
+  // Highlight Luma, Arcados bot, and Sira projects
+  const featuredProjects = [
+    {
+      name: "Luma AI Knowledge Engine",
+      date: "May 2025",
+      skills: "TypeScript, LangChain, Ollama, Xenova, RAG",
+      summary: "Engineered Obsidian-native RAG pipeline with LangChain/Ollama for semantic note search, achieving 95% accuracy via bidirectional clustering and sub-second queries on unstructured Markdown. Implemented local Xenova Transformers for vector embeddings and cosine similarity analysis, enabling privacy-preserving topic extraction and automatic organization of journal entries and thoughts."
+    },
+    {
+      name: "Arc Decentralized Archive System",
+      date: "April 2025",
+      skills: "Rust, Distributed Systems, Cryptographic Verification",
+      summary: "Developed a decentralized, versioned, cryptographically-verifiable archive system designed to help people, conversations, and institutions preserve data securely across devices. Built with Rust for performance and security, featuring cryptographic verification and decentralized architecture for reliable data preservation."
+    },
+    {
+      name: "Sira Conversational AI Assistant",
+      date: "May 2024",
+      skills: "TypeScript, Bun, LangChain, OpenAI, Azure, Whisper",
+      summary: "Developed a conversational AI assistant featuring real-time token streaming that chunks and sequences LLM responses across multiple provider models, enabling seamless integration between local and remote systems with concurrent audio synthesis. Implemented voice-to-voice pipeline using Whisper.cpp for transcription, Azure/Google TTS from sequenced chunks, and CLI/HTTP interface with auto-routing for scalable deployment."
+    }
+  ];
+  
   return (
-    <div className="mt-1 h-full ">
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-2xl mx-2 text-center justify-center">
+        <div className="relative mx-auto max-w-6xl font-montserrat py-8 px-8">
+      {/* Hero Section */}
+      <section className="text-center mb-16 pt-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+          className="max-w-4xl mx-auto"
+        >
           <TextGenerateEffect
-            className={title()}
-            words="Innovative software developer with a foundation in Cybersecurity, and Full-Stack Development."
+            className={title({ size: "lg", color: "foreground" })}
+            words="Full-stack developer specializing in AI-driven automation and intelligent systems."
           />
-          <motion.div
+          
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3.5, duration: 1 }}
+            transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto mb-12 leading-relaxed font-normal mt-6"
           >
+            TypeScript, React.js, Next.js, LangChain, RAG pipelines, OpenAI. Building scalable applications that solve complex business problems.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            className="flex gap-6 justify-center"
+          >
+            <Link
+              href="/projects"
+              className="group relative px-10 py-3.5 bg-gradient-to-r from-button-primary-500 to-button-primary-700 dark:from-button-primary-dark-500 dark:to-button-primary-dark-700 text-white rounded-xl font-medium transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-[1.02] backdrop-blur-md"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-90" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clipRule="evenodd" />
+                </svg>
+                View Projects
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-button-primary-600 to-button-primary-800 dark:from-button-primary-dark-600 dark:to-button-primary-dark-800 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl backdrop-blur-sm"></div>
+            </Link>
+            <Link
+              href="/about"
+              className="group relative px-10 py-3.5 bg-white/50 dark:bg-white/5 backdrop-blur-xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 rounded-xl font-medium transition-all duration-500 shadow-md hover:shadow-lg hover:scale-[1.02] hover:bg-white/70 dark:hover:bg-white/10"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-80" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+                Learn More
+              </span>
+            </Link>
           </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Stats Grid */}
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-40 max-w-5xl mx-auto">
+        {[
+          { number: "4+", label: "AI Systems" },
+          { number: "95%", label: "Accuracy" },
+          { number: "200+", label: "Users" },
+          { number: "6+", label: "Languages" }
+        ].map((stat, index) => (
+          <motion.div
+            key={stat.label}
+            whileHover={{ scale: 1.02, y: -1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 + index * 0.1, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            className="bg-content1/60 backdrop-blur-lg rounded-2xl p-8 transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-102 hover:bg-content1/80"
+          >
+            <div className="text-[2.5rem] font-bold text-foreground mb-2 tracking-tight">{stat.number}</div>
+            <div className="text-[0.9rem] text-default-600 font-light tracking-[0.05em] uppercase">{stat.label}</div>
+          </motion.div>
+        ))}
+      </section>
+
+      {/* Project Showcase */}
+      <section className="mb-32">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-[1.75rem] font-medium text-foreground mb-6 tracking-tight">
+            Recent Work
+          </h2>
+          <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
+        </motion.div>
+        
+        <div className="grid md:grid-cols-3 gap-8 items-start">
+          {featuredProjects.map((project, index) => (
+            <motion.div
+              key={project.name}
+              whileHover={{ scale: 1.015, y: -2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+              viewport={{ once: true }}
+              className="bg-content1/60 backdrop-blur-lg rounded-2xl p-8 transition-all duration-700 shadow-lg hover:shadow-xl hover:scale-[1.015] hover:bg-content1/80 h-fit"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-[1.1rem] font-semibold text-foreground leading-[1.2] tracking-tight flex-1 pr-3">{project.name}</h3>
+                <span className="text-[0.75rem] text-default-600 dark:text-default-300 bg-default-100/60 dark:bg-default-200/20 rounded-xl px-3 py-1.5 backdrop-blur-sm font-medium whitespace-nowrap">
+                  {project.date}
+                </span>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.skills.split(", ").slice(0, 3).map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 bg-default-100 text-default-700 text-[0.75rem] rounded-lg font-medium whitespace-nowrap"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              
+              <p className="text-default-600 dark:text-default-400 text-[0.9rem] leading-[1.7] font-normal">
+                {project.summary}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </section>
-      <div className="max-w-[800px] mx-auto">
-        <div className="flex justify-center pb-10 md:pb-14">
-          <div className={`mt-10 w-full text-xl grid gap-4 ${isSmallScreen ? 'grid-cols-3' : 'grid-cols-4'} grid-rows-2 mx-8`}>
-            {displayedSkills.map((skill, index) => (
-              <div key={index} className="flex-grow m-auto">{skill}</div>
-            ))}
-          </div>
-        </div>
 
-        {homeData.map((category: Category, index: number) => (
-          <div key={index}>
-            <p className="py-2 pl-10">{category.category.toUpperCase().replace('_', ' ')}</p>
-            {category.experiences.map((experience: Experience, expIndex: number) => (
-              <div key={expIndex} className="leading-6 my-4 md:my-10 mx-10">
-                <p className="text-xl py-1">{experience.name}</p>
-                <div className="flex text-xs md:text-md py-2 justify-between items-center flex-nowrap">
-                  <p className="flex-grow">{experience.skills}</p>
-                  <p className="ml-4 flex-shrink-0">{experience.date}</p>
-                </div>
-                <p className="text-sm  leading-7 md:text-md md:leading-8">{experience.summary}</p>
-              </div>
-            ))}
-          </div>
-        ))}
-
-        {/* <div className="flex-grow  w-full mx-auto border-b py-4 mb-12 border-default max-w-[850px]"></div> */}
-        <div className="pt-10 pb-20 pl-10 text-sm md:text-md">
-          <p className="text-sm md:text-lg">EDUCATION & CERTIFICATES</p>
-          <p>2022 - Graduate Certificate in Full Stack Java Development, Tech Elevator</p>
-          <p>2023 - Graduate Certificate in Cybersecurity, Google </p>
+      {/* Tech Bubble Cloud */}
+      <section className="text-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          className="mb-12"
+        >
+          <h2 className="text-[1.75rem] font-medium text-foreground mb-6 tracking-tight">
+            Technologies
+          </h2>
+          <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
+        </motion.div>
+        
+        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+          {topSkills.map((skill, index) => (
+            <motion.div
+              key={skill}
+              whileHover={{ scale: 1.05, rotate: -1 }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.05, duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+              className="px-6 py-3 bg-content1/60 backdrop-blur-lg text-default-700 text-[0.9rem] rounded-2xl transition-all duration-600 hover:bg-content1/80 hover:scale-105 hover:-translate-y-1 font-medium"
+            >
+              {skill}
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
