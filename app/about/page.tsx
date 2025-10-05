@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import aboutData from "@/content/about-data";
 
 export default function AboutPage() {
-	const { name, info, skills1, skills2, skills3, summary } = aboutData;
+	const { name, skills1, skills2, skills3, summary } = aboutData;
 
 	const skillSets = [
 		{
@@ -33,14 +33,14 @@ export default function AboutPage() {
 	return (
 		<div className="relative mx-auto max-w-6xl font-montserrat py-12 px-6 md:px-8">
 			{/* Hero Section */}
-			<section className="mb-20">
+			<section className="mb-16">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-					className="max-w-5xl mx-auto"
+					className="max-w-4xl mx-auto"
 				>
-					<div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+					<div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 						{/* Photo Section */}
 						<motion.div
 							initial={{ opacity: 0, scale: 0.8 }}
@@ -65,35 +65,16 @@ export default function AboutPage() {
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.5, duration: 0.8 }}
-								className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight"
+								className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 tracking-tight"
 							>
 							{name}
 							</motion.h1>
 
-							<motion.div
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								transition={{ delay: 0.7, duration: 0.8 }}
-								className="space-y-4 mb-8"
-							>
-								{info.map((item) => (
-									<div
-										key={item}
-										className="flex items-center justify-center lg:justify-start gap-3 text-gray-600 dark:text-gray-300"
-									>
-										<div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex-shrink-0"></div>
-										<span className="text-base md:text-lg font-medium">
-											{item}
-										</span>
-						</div>
-								))}
-							</motion.div>
-
 							<motion.p
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
-								transition={{ delay: 0.9, duration: 0.8 }}
-								className="text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0"
+								transition={{ delay: 0.7, duration: 0.8 }}
+								className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed font-normal max-w-xl mx-auto lg:mx-0"
 							>
 								{summary}
 							</motion.p>
@@ -104,17 +85,17 @@ export default function AboutPage() {
 
 			{/* Skills Sections */}
 			{skillSets.map((skillSet) => (
-				<section key={skillSet.name} className="mb-24">
+				<section key={skillSet.name} className="mb-20">
 					<motion.div
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-						className="text-center mb-16"
+						className="text-center mb-2"
 					>
-						<h2 className="text-[1.75rem] font-medium text-foreground mb-6 tracking-tight">
+						<h2 className="text-[1.75rem] font-medium text-foreground mb-2 tracking-tight">
 							{skillSet.name}
 						</h2>
-						<div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto mb-8"></div>
+						<div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto mb-2"></div>
 					</motion.div>
 
 					<div className="max-w-5xl mx-auto">
@@ -122,9 +103,9 @@ export default function AboutPage() {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.2, duration: 0.8 }}
-							className="bg-content1/60 backdrop-blur-lg rounded-2xl p-8 mb-12 shadow-lg"
+							className="mb-20 "
 						>
-							<p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed font-normal text-center">
+							<p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed font-normal text-center max-w-4xl mx-auto">
 								{skillSet.description}
 							</p>
 						</motion.div>
@@ -135,9 +116,12 @@ export default function AboutPage() {
 									key={skillName}
 									whileHover={{ scale: 1.05, y: -2 }}
 									initial={{ opacity: 0, y: 20 }}
-									whileInView={{ opacity: 1, y: 0 }}
-									transition={{ delay: index * 0.05, duration: 0.6 }}
-									viewport={{ once: true }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ 
+										delay: 0.3 + (index * 0.05), 
+										duration: 0.8,
+										ease: [0.25, 0.1, 0.25, 1]
+									}}
 									className="bg-content1/60 backdrop-blur-lg rounded-xl p-6 transition-all duration-500 shadow-lg hover:shadow-xl hover:bg-content1/80 group"
 								>
 									<div className="text-center">

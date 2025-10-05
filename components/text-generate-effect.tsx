@@ -25,7 +25,7 @@ export const TextGenerateEffect = ({
 				delay: stagger(0.2),
 			},
 		);
-	}, [scope.current]);
+	}, [animate]);
 
 	const actionWordOneClasses = cn(title({ color: "violet" }), "opacity-0");
 	const actionWordTwoClasses = cn(title({ color: "blue" }), "opacity-0 ");
@@ -48,17 +48,17 @@ export const TextGenerateEffect = ({
 		return (
 			<motion.div ref={scope}>
 				{wordsArray.map((word, index) => {
-					if (index == 0 || index == 3 || index == 6) {
+					if (index === 0 || index === 3 || index === 6) {
 						return (
-							<motion.span key={word + index} className={wordClasses(index)}>
-								{word + " "}
+							<motion.span key={word} className={wordClasses(index)}>
+								{`${word} `}
 								<br />
 							</motion.span>
 						);
 					} else {
 						return (
-							<motion.span key={word + index} className={wordClasses(index)}>
-								{word + " "}
+							<motion.span key={word} className={wordClasses(index)}>
+								{`${word} `}
 							</motion.span>
 						);
 					}
