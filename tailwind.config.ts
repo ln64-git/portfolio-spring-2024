@@ -77,15 +77,16 @@ module.exports = {
 				},
 				dark: {
 					colors: {
+						foreground: "#c2c2c2",
 						background: "#141312",
 						secondary: "#c35933",
 						content1: "#1e1b1b",
-						default: "#a9a9a9",
+						default: "#2d2d2d",
 						primary: {
 							//... 50 to 900
 							"50": "#1e1b1b",
 							"100": "#1e1b1b",
-							DEFAULT: "#d0d0d0",
+							DEFAULT: "#848484",
 						},
 					},
 				},

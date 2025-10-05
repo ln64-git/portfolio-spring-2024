@@ -21,7 +21,7 @@ export default function Home() {
       summary: "Developed a decentralized, versioned, cryptographically-verifiable archive system designed to help people, conversations, and institutions preserve data securely across devices. Built with Rust for performance and security, featuring cryptographic verification and decentralized architecture for reliable data preservation."
     },
     {
-      name: "Sira Conversational AI Assistant",
+      name: "Sira Conversation AI Assistant",
       date: "May 2024",
       skills: "TypeScript, Bun, LangChain, OpenAI, Azure, Whisper",
       summary: "Developed a conversational AI assistant featuring real-time token streaming that chunks and sequences LLM responses across multiple provider models, enabling seamless integration between local and remote systems with concurrent audio synthesis. Implemented voice-to-voice pipeline using Whisper.cpp for transcription, Azure/Google TTS from sequenced chunks, and CLI/HTTP interface with auto-routing for scalable deployment."
@@ -90,10 +90,10 @@ export default function Home() {
       {/* Stats Grid */}
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-24 max-w-5xl mx-auto">
         {[
-          { number: "4+", label: "AI Systems" },
-          { number: "95%", label: "Accuracy" },
-          { number: "200+", label: "Users" },
-          { number: "6+", label: "Languages" }
+          { number: "5+", label: "Years Experience" },
+          { number: "11", label: "Projects" },
+          { number: "100%", label: "Satisfaction" },
+          { number: "32+", label: "Skills" }
         ].map((stat, index) => (
           <motion.div
             key={stat.label}
@@ -127,32 +127,37 @@ export default function Home() {
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.name}
-              whileHover={{ scale: 1.015, y: -2 }}
+              whileHover={{ scale: 1.02, y: -4 }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
               viewport={{ once: true }}
-              className="bg-content1/60 backdrop-blur-lg rounded-2xl p-6 md:p-8 transition-all duration-700 shadow-lg hover:shadow-xl hover:scale-[1.015] hover:bg-content1/80 h-fit"
+              className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-fit"
             >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-[1.1rem] font-semibold text-foreground leading-[1.2] tracking-tight flex-1 pr-3">{project.name}</h3>
-                <span className="text-[0.75rem] text-default-600 dark:text-default-300 bg-default-100/60 dark:bg-default-200/20 rounded-xl px-3 py-1.5 backdrop-blur-sm font-medium whitespace-nowrap">
+              {/* Header Section */}
+              <div className="flex justify-between items-start mb-6">
+                <h3 className="text-xl font-bold text-foreground leading-tight tracking-tight flex-1 pr-4  transition-colors duration-300">
+                  {project.name}
+                </h3>
+                <span className="text-xs  text-muted-foreground bg-muted px-3 py-2 rounded-full backdrop-blur-sm bg-primary/10 ">
                   {project.date}
                 </span>
               </div>
               
-              <div className="flex flex-wrap gap-2 mb-4">
+              {/* Skills Section */}
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.skills.split(", ").slice(0, 3).map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 bg-default-100 text-default-700 text-[0.75rem] rounded-lg font-medium whitespace-nowrap"
+                    className="px-3 py-1.5 bg-primary/10  text-xs font-medium rounded-lg  hover:bg-primary/20 transition-colors duration-200"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
               
-              <p className="text-default-600 dark:text-default-400 text-[0.9rem] leading-[1.7] font-normal">
+              {/* Description Section */}
+              <p className="text-muted-foreground text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300">
                 {project.summary}
               </p>
             </motion.div>
