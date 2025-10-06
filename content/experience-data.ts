@@ -1,7 +1,7 @@
 const experienceData = [
 	{
 		company: "CinDay Academy",
-		duration: "February 2023 - Present",
+		duration: "February 2023 - September 2023",
 		image: "cinday",
 		role: "IT Assistant",
 		summary:

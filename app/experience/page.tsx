@@ -38,7 +38,7 @@ const ExperienceModal = ({
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
-				className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+				className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-md"
 				onClick={onClose}
 			>
 				<motion.div
@@ -46,17 +46,17 @@ const ExperienceModal = ({
 					animate={{ scale: 1, opacity: 1 }}
 					exit={{ scale: 0.9, opacity: 0 }}
 					transition={{ type: "spring", duration: 0.5 }}
-					className="relative bg-content1/90 dark:bg-content1/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3 sm:p-6 max-w-4xl w-full max-h-[95vh] sm:max-h-[85vh] overflow-hidden shadow-2xl border border-content2/10 mx-2 sm:mx-0"
+					className="relative bg-content1/98 dark:bg-content1/95 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl w-full max-h-[90vh] sm:max-h-[85vh] md:max-h-[80vh] shadow-2xl border border-content2/20 overflow-y-auto"
 					onClick={(e) => e.stopPropagation()}
 				>
 					{/* Close Button */}
 					<button
 						type="button"
 						onClick={onClose}
-						className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 rounded-full bg-content2/20 hover:bg-content2/40 transition-colors duration-200"
+						className="absolute top-3 right-3 p-2 rounded-full bg-content2/30 hover:bg-content2/50 transition-colors duration-200 z-10 backdrop-blur-sm"
 					>
 						<svg
-							className="w-5 h-5 sm:w-6 sm:h-6"
+							className="w-4 h-4"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -73,33 +73,33 @@ const ExperienceModal = ({
 					</button>
 
 					{/* Modal Content */}
-					<div className="space-y-2 sm:space-y-4 h-full flex flex-col">
+					<div className="space-y-2 sm:space-y-3 h-full flex flex-col">
 						{/* Header Section */}
-						<div className="text-center">
-							<div className="inline-flex items-center gap-2 px-3 sm:px-6 py-1.5 sm:py-3 bg-content2/10 rounded-full text-xs sm:text-base font-medium text-foreground mb-1 sm:mb-3">
+						<div className="text-center flex-shrink-0">
+							<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-content2/10 rounded-full text-sm font-medium text-foreground mb-2">
 								{selectedExperience.company}
 							</div>
 							
-							<h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-1 sm:mb-3">
+							<h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 leading-tight">
 								{selectedExperience.role}
 							</h2>
 							
-							<div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-6 mt-3 sm:mt-8 mb-2 sm:mb-4">
-								<span className="text-xs sm:text-base text-muted-foreground bg-primary/10 px-2 sm:px-4 py-1 sm:py-2 rounded-full">
+							<div className="flex flex-row items-center justify-center gap-3 mt-2">
+								<span className="text-sm text-muted-foreground bg-primary/10 px-3 py-1.5 rounded-full">
 									{startDate}
 								</span>
-								<span className="text-muted-foreground hidden sm:inline">—</span>
-								<span className="text-xs sm:text-base text-muted-foreground bg-primary/10 px-2 sm:px-4 py-1 sm:py-2 rounded-full">
+								<span className="text-muted-foreground">—</span>
+								<span className="text-sm text-muted-foreground bg-primary/10 px-3 py-1.5 rounded-full">
 									{endDate}
 								</span>
 							</div>
 						</div>
 
 						{/* Image Section */}
-						<div className="flex justify-center">
+						<div className="flex justify-center flex-shrink-0">
 							<button 
 								type="button"
-								className="relative group w-full max-w-64 sm:w-80 h-32 sm:h-48 cursor-pointer border-none bg-transparent p-0"
+								className="relative group w-full max-w-32 sm:max-w-40 md:max-w-48 h-16 sm:h-20 md:h-24 cursor-pointer border-none bg-transparent p-0"
 								onClick={onImageClick}
 								onKeyDown={(e) => {
 									if (e.key === 'Enter' || e.key === ' ') {
@@ -132,29 +132,29 @@ const ExperienceModal = ({
 						</div>
 
 						{/* Summary Section */}
-						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-2xl pt-2 sm:pt-4 px-3 sm:px-6 pb-3 sm:pb-6 border border-content2/20">
-							<div className="mb-2 sm:mb-4">
-								<h4 className="text-lg sm:text-2xl font-bold text-foreground list-none">Role Overview</h4>
+						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-xl p-3 flex-shrink-0">
+							<div className="mb-2">
+								<h4 className="text-base font-bold text-foreground list-none">Role Overview</h4>
 							</div>
-							<p className="text-muted-foreground leading-relaxed text-sm sm:text-lg">
+							<p className="text-muted-foreground leading-relaxed text-sm">
 								{selectedExperience.summary}
 							</p>
 						</div>
 
 						{/* Key Achievements Section */}
-						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-2xl p-3 sm:p-6 border border-content2/20 flex-1">
-							<div className="mb-2 sm:mb-4">
-								<h4 className="text-lg sm:text-2xl font-bold text-foreground list-none">Key Achievements</h4>
+						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-xl p-3 flex-1">
+							<div className="mb-2">
+								<h4 className="text-base font-bold text-foreground list-none">Key Achievements</h4>
 							</div>
 							
-							<div className="space-y-1 sm:space-y-3">
+							<div className="space-y-1">
 								{selectedExperience.bulletArray.map((bullet, index) => (
 									<div
 										key={`${selectedExperience.company}-modal-bullet-${index}`}
-										className="group flex items-start gap-2 sm:gap-4 p-1.5 sm:p-3 rounded-xl hover:bg-content2/10 transition-all duration-200"
+										className="group flex items-start gap-2 p-2 rounded-lg hover:bg-content2/10 transition-all duration-200"
 									>
-										<div className="flex-shrink-0 w-1.5 sm:w-3 h-1.5 sm:h-3 bg-foreground rounded-full mt-1.5 sm:mt-2.5 group-hover:scale-110 transition-transform duration-200"></div>
-										<span className="text-xs sm:text-base text-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-200">
+										<div className="flex-shrink-0 w-1.5 h-1.5 bg-foreground rounded-full mt-1.5 group-hover:scale-110 transition-transform duration-200"></div>
+										<span className="text-sm text-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-200 flex-1">
 											{bullet}
 										</span>
 									</div>
@@ -240,9 +240,9 @@ export default function ExperiencePage() {
 	const [showImagePopup, setShowImagePopup] = useState(false);
 
 	return (
-		<div className="relative mx-auto max-w-7xl font-montserrat py-8 sm:py-12 px-4 sm:px-6 md:px-8">
+		<div className="relative mx-auto max-w-7xl font-montserrat py-4 sm:py-8 md:py-12 px-2 sm:px-4 md:px-6 lg:px-8">
 			{/* Hero Section */}
-			<section className="text-center mb-12 sm:mb-16 pt-4 sm:pt-8">
+			<section className="text-center mb-6 sm:mb-12 md:mb-16 pt-2 sm:pt-4 md:pt-8">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ export default function ExperiencePage() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-						className="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-normal mt-6 sm:mt-8 px-2"
+						className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-4 sm:mb-8 md:mb-12 leading-relaxed font-normal mt-3 sm:mt-6 md:mt-8 px-1"
 					>
 						A comprehensive overview of my professional journey, showcasing
 						diverse experiences across technology, culinary arts, and business
@@ -268,7 +268,7 @@ export default function ExperiencePage() {
 			</section>
 
 			{/* Experience Timeline */}
-			<section className="space-y-8 sm:space-y-12">
+			<section className="space-y-4 sm:space-y-8 md:space-y-12">
 				{experienceData.map((experience: ExperienceItem, index: number) => (
 					<motion.div
 						key={`${experience.company}-${experience.role}`}

@@ -1,4 +1,5 @@
 import { nextui } from "@nextui-org/theme";
+// @ts-expect-error
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */

@@ -53,8 +53,8 @@ export default function ContactPage() {
 				</svg>
 			),
 			title: "Email",
-			value: "luke@example.com",
-			description: "Send me a message anytime",
+			value: "ln64.ohio@outlook.com",
+			description: "Let's work together",
 		},
 		{
 			icon: (
