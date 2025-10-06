@@ -46,14 +46,14 @@ const ExperienceModal = ({
 					animate={{ scale: 1, opacity: 1 }}
 					exit={{ scale: 0.9, opacity: 0 }}
 					transition={{ type: "spring", duration: 0.5 }}
-					className="relative bg-content1/98 dark:bg-content1/95 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl w-full max-h-[90vh] sm:max-h-[85vh] md:max-h-[80vh] shadow-2xl border border-content2/20 overflow-y-auto"
+					className="relative bg-content1 dark:bg-content1/90 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl w-full max-h-[90vh] sm:max-h-[85vh] md:max-h-[80vh] shadow-2xl border border-content2/20 overflow-y-auto"
 					onClick={(e) => e.stopPropagation()}
 				>
 					{/* Close Button */}
 					<button
 						type="button"
 						onClick={onClose}
-						className="absolute top-3 right-3 p-2 rounded-full bg-content2/30 hover:bg-content2/50 transition-colors duration-200 z-10 backdrop-blur-sm"
+						className="absolute top-3 right-3 p-2 rounded-full bg-content2/20 hover:bg-content2/40 transition-colors duration-200 z-10 backdrop-blur-sm"
 					>
 						<svg
 							className="w-4 h-4"
@@ -76,7 +76,7 @@ const ExperienceModal = ({
 					<div className="space-y-2 sm:space-y-3 h-full flex flex-col">
 						{/* Header Section */}
 						<div className="text-center flex-shrink-0">
-							<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-content2/10 rounded-full text-sm font-medium text-foreground mb-2">
+							<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full text-sm font-medium text-foreground mb-2">
 								{selectedExperience.company}
 							</div>
 							
@@ -132,7 +132,7 @@ const ExperienceModal = ({
 						</div>
 
 						{/* Summary Section */}
-						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-xl p-3 flex-shrink-0">
+						<div className="bg-primary/5 rounded-xl p-3 flex-shrink-0">
 							<div className="mb-2">
 								<h4 className="text-base font-bold text-foreground list-none">Role Overview</h4>
 							</div>
@@ -142,7 +142,7 @@ const ExperienceModal = ({
 						</div>
 
 						{/* Key Achievements Section */}
-						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-xl p-3 flex-1">
+						<div className="bg-primary/5 rounded-xl p-3 flex-1">
 							<div className="mb-2">
 								<h4 className="text-base font-bold text-foreground list-none">Key Achievements</h4>
 							</div>
@@ -151,9 +151,9 @@ const ExperienceModal = ({
 								{selectedExperience.bulletArray.map((bullet, index) => (
 									<div
 										key={`${selectedExperience.company}-modal-bullet-${index}`}
-										className="group flex items-start gap-2 p-2 rounded-lg hover:bg-content2/10 transition-all duration-200"
+										className="group flex items-start gap-2 p-2 rounded-lg hover:bg-primary/10 transition-all duration-200"
 									>
-										<div className="flex-shrink-0 w-1.5 h-1.5 bg-foreground rounded-full mt-1.5 group-hover:scale-110 transition-transform duration-200"></div>
+										<div className="flex-shrink-0 w-1.5 h-1.5 bg-primary rounded-full mt-1.5 group-hover:scale-110 transition-transform duration-200"></div>
 										<span className="text-sm text-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-200 flex-1">
 											{bullet}
 										</span>
