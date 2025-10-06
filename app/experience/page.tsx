@@ -242,7 +242,7 @@ export default function ExperiencePage() {
 	return (
 		<div className="relative mx-auto max-w-7xl font-montserrat py-4 sm:py-8 md:py-12 px-2 sm:px-4 md:px-6 lg:px-8">
 			{/* Hero Section */}
-			<section className="text-center mb-6 sm:mb-12 md:mb-16 pt-2 sm:pt-4 md:pt-8">
+			<section className="text-center mb-6 sm:mb-12 md:mb-16 pt-2 sm:pt-4 md:pt-4">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
