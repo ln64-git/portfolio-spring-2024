@@ -216,7 +216,7 @@ export default function ProjectsPage() {
 					<motion.p
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+						transition={{ delay: 1.0, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
 						className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed font-normal mt-4 sm:mt-6 md:mt-8"
 					>
 						A collection of projects showcasing expertise in AI-driven
@@ -230,7 +230,7 @@ export default function ProjectsPage() {
 				<motion.div
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ delay: 2.5, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+					transition={{ delay: 1.4, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
 					className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-4xl mx-auto"
 				>
 					{Object.entries(categories).map(([key, label]) => (
@@ -256,12 +256,13 @@ export default function ProjectsPage() {
 						<motion.div
 							key={project.name}
 							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
+							whileInView={{ opacity: 1, y: 0 }}
 							transition={{
 								delay: index * 0.1,
 								duration: 0.8,
 								ease: [0.25, 0.1, 0.25, 1],
 							}}
+							viewport={{ once: true, margin: "-100px" }}
 							whileHover={{ scale: 1.02, y: -4 }}
 							className="group bg-content1/50 dark:bg-content1/30 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 dark:hover:bg-content1/50 border border-content2/10 hover:border-content2/30 flex flex-col h-full cursor-pointer relative overflow-hidden"
 							onClick={() => setSelectedProject(project)}

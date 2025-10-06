@@ -46,7 +46,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ delay: 1.0, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed font-normal mt-3 sm:mt-4 md:mt-6"
           >
             TypeScript, React.js, Next.js, LangChain, RAG pipelines, OpenAI. Building scalable applications that solve complex business problems.
@@ -55,7 +55,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.5, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ delay: 1.4, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center"
           >
             <Link

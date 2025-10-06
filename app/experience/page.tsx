@@ -111,13 +111,23 @@ const ExperienceModal = ({
 							>
 								<div className="absolute inset-0 bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-2xl blur-sm"></div>
 								<div className="relative w-full h-full overflow-hidden rounded-2xl">
-									<Image
-										src={`/${selectedExperience.image}.png`}
-										alt={selectedExperience.company}
-										width={384}
-										height={224}
-										className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-2xl"
-									/>
+									<motion.div
+										initial={{ opacity: 0, scale: 0.9 }}
+										animate={{ opacity: 1, scale: 1 }}
+										transition={{ 
+											duration: 0.6, 
+											ease: [0.25, 0.1, 0.25, 1] 
+										}}
+										className="w-full h-full"
+									>
+										<Image
+											src={`/${selectedExperience.image}.png`}
+											alt={selectedExperience.company}
+											width={384}
+											height={224}
+											className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-2xl"
+										/>
+									</motion.div>
 								</div>
 								{/* Click hint overlay */}
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
@@ -210,13 +220,23 @@ const ImagePopup = ({
 
 					{/* Image */}
 					<div className="relative w-full h-full">
-						<Image
-							src={`/${selectedExperience.image}.png`}
-							alt={selectedExperience.company}
-							width={800}
-							height={600}
-							className="w-full h-full object-contain rounded-lg"
-						/>
+						<motion.div
+							initial={{ opacity: 0, scale: 0.8 }}
+							animate={{ opacity: 1, scale: 1 }}
+							transition={{ 
+								duration: 0.6, 
+								ease: [0.25, 0.1, 0.25, 1] 
+							}}
+							className="w-full h-full"
+						>
+							<Image
+								src={`/${selectedExperience.image}.png`}
+								alt={selectedExperience.company}
+								width={800}
+								height={600}
+								className="w-full h-full object-contain rounded-lg"
+							/>
+						</motion.div>
 					</div>
 
 					{/* Image info */}
@@ -257,7 +277,7 @@ export default function ExperiencePage() {
 					<motion.p
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+						transition={{ delay: 1.0, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
 						className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-4 sm:mb-8 md:mb-12 leading-relaxed font-normal mt-3 sm:mt-6 md:mt-8 px-1"
 					>
 						A comprehensive overview of my professional journey, showcasing
@@ -273,12 +293,13 @@ export default function ExperiencePage() {
 					<motion.div
 						key={`${experience.company}-${experience.role}`}
 						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
+						whileInView={{ opacity: 1, y: 0 }}
 						transition={{
-							delay: index * 0.2,
+							delay: index * 0.1,
 							duration: 0.8,
 							ease: [0.25, 0.1, 0.25, 1],
 						}}
+						viewport={{ once: true, margin: "-100px" }}
 						whileHover={{ scale: 1.02, y: -4 }}
 						onClick={() => setSelectedExperience(experience)}
 						className="cursor-pointer group"
