@@ -2,4 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    min-height: 4.5rem; /* Ensure consistent height for 4 lines */
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    min-height: 3.5rem; /* Ensure consistent height for 3 lines */
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    min-height: 2.5rem; /* Ensure consistent height for 2 lines */
+  }
+}
+
 
