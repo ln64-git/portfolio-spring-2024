@@ -1,8 +1,7 @@
 "use client";
 
-import { Image } from "@nextui-org/react";
-
-// import useWindowSize from "@/utils/window-size";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface JobProps {
   company: string;
@@ -16,67 +15,108 @@ interface JobProps {
 export default function Experience(data: JobProps) {
   const durationParts = data.duration.split(" - ");
   const startDate = durationParts[0];
-  const startDateParts = startDate.split(" ");
-  const startMonth = startDateParts[0];
-  const startYear = startDateParts[1];
-
   const endDate = durationParts[1] === "Current" ? "Present" : durationParts[1];
-  const endDateParts = endDate.split(" ");
-  const endMonth = endDateParts[0];
-  const endYear = endDateParts[1];
-
-  // const windowSize = useWindowSize();
-
-  const DurationFormat = () => {
-    // if (windowSize > 400) {
-    return (
-      <div className="flex justify-center">
-        <div className="mx-6 w-1/2 text-right font-light  ">
-          <div>{startDate}</div>
-        </div>
-        <div className="">-</div>
-        <div className="mx-6 w-1/2 text-left font-light  ">
-          <div>{endDate}</div>
-        </div>
-      </div>
-    );
-  };
 
   return (
-    <div className="mx-auto  max-w-[700px] py-2 md:py-2">
-      <div className="flex h-[40px]  my-2 items-center justify-center text-2xl md:text-3xl  md:my-4  ">
-        {data.role}
-      </div>
+    <motion.div
+      whileHover={{ scale: 1.02, y: -4 }}
+      className="group bg-content1/50 dark:bg-content1/30 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/60 dark:hover:bg-content1/40 border border-content2/10 hover:border-content2/20 relative overflow-hidden max-w-4xl mx-auto"
+    >
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-foreground/3 to-foreground/6 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      
+      <div className="relative z-10">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row items-start gap-8 mb-8">
+          {/* Company Logo */}
+          <motion.div
+            whileHover={{ scale: 1.05, y: -2 }}
+            className="flex-shrink-0"
+          >
+            <div className="w-48 h-32 lg:w-56 lg:h-36 rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-content2/10 to-content2/5 flex items-center justify-center">
+              <Image
+                width={224}
+                height={144}
+                src={`/${data.image}.png`}
+                alt={data.company}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
 
-      <div className=" flex items-center justify-around overflow-x-hidden ">
-        <div className=" flex w-1/2 justify-center ">
-          <Image
-            width={300}
-            height={300}
-            src={`/${data.image}.png`}
-            alt={data.image}
-          />
-        </div>
-      </div>
-      <div className="py-3">
-        <div className="mx-auto max-w-[700px] pb-1 text-center text-xl font-medium  ">
-          {data.company}
-        </div>
-        <div className=" py-1 text-center text-sm">{DurationFormat()}</div>
-        <div className=" pt-1 text-sm text-left leading-6 md:leading-7 max-w-[650px] mx-auto my-2">
-          {data.summary}
-        </div>
-        <ul className=" flex flex-col justify-center items-center">
-          {data.bulletArray.map((bullet, index) => (
-            <li
-              className=" px-auto list-disc pt-4 text-sm  text-left leading-6 md:leading-7 max-w-[580px] mx-4  "
-              key={index}
+          {/* Company Info */}
+          <div className="flex-1 text-left">
+            <motion.h3
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-3xl lg:text-4xl font-bold text-foreground mb-3 tracking-tight"
             >
-              {bullet}
-            </li>
-          ))}
-        </ul>
+              {data.role}
+            </motion.h3>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-xl lg:text-2xl font-semibold text-foreground mb-4 tracking-wide"
+            >
+              {data.company}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="flex flex-col sm:flex-row items-start gap-4"
+            >
+              <span className="text-sm text-muted-foreground bg-primary/10 px-3 py-1.5 rounded-full">
+                {startDate}
+              </span>
+              <span className="text-muted-foreground">—</span>
+              <span className="text-sm text-muted-foreground bg-primary/10 px-3 py-1.5 rounded-full">
+                {endDate}
+              </span>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Summary */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-8"
+        >
+          <p className="text-muted-foreground leading-relaxed text-lg text-left font-medium">
+            {data.summary}
+          </p>
+        </motion.div>
+
+        {/* Key Achievements */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <h4 className="text-xl font-bold text-foreground mb-6 text-left tracking-tight">
+            Key Achievements
+          </h4>
+          <ul className="space-y-3 text-left">
+            {data.bulletArray.map((bullet, index) => (
+              <motion.li
+                key={`${data.company}-bullet-${index}`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 + (index * 0.1) }}
+                className="flex items-start gap-4 p-3 rounded-xl hover:bg-content2/20 dark:hover:bg-content2/10 transition-all duration-200 text-left"
+              >
+                <div className="flex-shrink-0 w-2 h-2 bg-foreground rounded-full mt-2.5 hover:scale-110 transition-transform duration-200"></div>
+                <span className="text-base text-foreground leading-relaxed hover:text-foreground dark:hover:text-foreground/80 transition-colors duration-200 text-left">{bullet}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
