@@ -271,7 +271,7 @@ export default function ExperiencePage() {
 				>
 					<TextGenerateEffect
 						className={title({ size: "lg", color: "foreground" })}
-						words="Professional Experience & Career Journey"
+						words="Professional Experience & Career Path"
 					/>
 
 					<motion.p
