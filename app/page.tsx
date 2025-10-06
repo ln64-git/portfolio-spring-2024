@@ -157,7 +157,7 @@ export default function Home() {
               </div>
               
               {/* Description Section */}
-              <p className="text-muted-foreground text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300">
+              <p className="text-foreground/70 text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300">
                 {project.summary}
               </p>
             </motion.div>

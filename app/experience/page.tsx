@@ -46,17 +46,17 @@ const ExperienceModal = ({
 					animate={{ scale: 1, opacity: 1 }}
 					exit={{ scale: 0.9, opacity: 0 }}
 					transition={{ type: "spring", duration: 0.5 }}
-					className="relative bg-content1/90 dark:bg-content1/80 backdrop-blur-xl rounded-3xl p-6 max-w-4xl w-full max-h-[85vh] overflow-hidden shadow-2xl border border-content2/10"
+					className="relative bg-content1/90 dark:bg-content1/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3 sm:p-6 max-w-4xl w-full max-h-[95vh] sm:max-h-[85vh] overflow-hidden shadow-2xl border border-content2/10 mx-2 sm:mx-0"
 					onClick={(e) => e.stopPropagation()}
 				>
 					{/* Close Button */}
 					<button
 						type="button"
 						onClick={onClose}
-						className="absolute top-6 right-6 p-2 rounded-full bg-content2/20 hover:bg-content2/40 transition-colors duration-200"
+						className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 rounded-full bg-content2/20 hover:bg-content2/40 transition-colors duration-200"
 					>
 						<svg
-							className="w-6 h-6"
+							className="w-5 h-5 sm:w-6 sm:h-6"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -73,23 +73,23 @@ const ExperienceModal = ({
 					</button>
 
 					{/* Modal Content */}
-					<div className="space-y-4 h-full flex flex-col">
+					<div className="space-y-2 sm:space-y-4 h-full flex flex-col">
 						{/* Header Section */}
 						<div className="text-center">
-							<div className="inline-flex items-center gap-2 px-6 py-3 bg-content2/10 rounded-full text-base font-medium text-foreground mb-3">
+							<div className="inline-flex items-center gap-2 px-3 sm:px-6 py-1.5 sm:py-3 bg-content2/10 rounded-full text-xs sm:text-base font-medium text-foreground mb-1 sm:mb-3">
 								{selectedExperience.company}
 							</div>
 							
-							<h2 className="text-5xl font-bold text-foreground mb-3">
+							<h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-1 sm:mb-3">
 								{selectedExperience.role}
 							</h2>
 							
-							<div className="flex items-center justify-center gap-6 mt-8 mb-4">
-								<span className="text-base text-muted-foreground bg-primary/10 px-4 py-2 rounded-full">
+							<div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-6 mt-3 sm:mt-8 mb-2 sm:mb-4">
+								<span className="text-xs sm:text-base text-muted-foreground bg-primary/10 px-2 sm:px-4 py-1 sm:py-2 rounded-full">
 									{startDate}
 								</span>
-								<span className="text-muted-foreground">—</span>
-								<span className="text-base text-muted-foreground bg-primary/10 px-4 py-2 rounded-full">
+								<span className="text-muted-foreground hidden sm:inline">—</span>
+								<span className="text-xs sm:text-base text-muted-foreground bg-primary/10 px-2 sm:px-4 py-1 sm:py-2 rounded-full">
 									{endDate}
 								</span>
 							</div>
@@ -99,7 +99,7 @@ const ExperienceModal = ({
 						<div className="flex justify-center">
 							<button 
 								type="button"
-								className="relative group w-96 h-56 cursor-pointer border-none bg-transparent p-0"
+								className="relative group w-full max-w-64 sm:w-80 h-32 sm:h-48 cursor-pointer border-none bg-transparent p-0"
 								onClick={onImageClick}
 								onKeyDown={(e) => {
 									if (e.key === 'Enter' || e.key === ' ') {
@@ -122,7 +122,7 @@ const ExperienceModal = ({
 								{/* Click hint overlay */}
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
 									<div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-2">
-									<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+									<svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 										<title>Magnifying glass icon</title>
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
 									</svg>
@@ -132,29 +132,29 @@ const ExperienceModal = ({
 						</div>
 
 						{/* Summary Section */}
-						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-2xl pt-4 border border-content2/20">
-							<div className="mb-4">
-								<h4 className="text-2xl font-bold text-foreground list-none">Role Overview</h4>
+						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-2xl pt-2 sm:pt-4 px-3 sm:px-6 pb-3 sm:pb-6 border border-content2/20">
+							<div className="mb-2 sm:mb-4">
+								<h4 className="text-lg sm:text-2xl font-bold text-foreground list-none">Role Overview</h4>
 							</div>
-							<p className="text-muted-foreground leading-relaxed text-lg">
+							<p className="text-muted-foreground leading-relaxed text-sm sm:text-lg">
 								{selectedExperience.summary}
 							</p>
 						</div>
 
 						{/* Key Achievements Section */}
-						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-2xl p-6 border border-content2/20 flex-1">
-							<div className="mb-4">
-								<h4 className="text-2xl font-bold text-foreground list-none">Key Achievements</h4>
+						<div className="bg-gradient-to-br from-content2/10 to-content2/5 rounded-2xl p-3 sm:p-6 border border-content2/20 flex-1">
+							<div className="mb-2 sm:mb-4">
+								<h4 className="text-lg sm:text-2xl font-bold text-foreground list-none">Key Achievements</h4>
 							</div>
 							
-							<div className="space-y-3 max-h-48 overflow-y-auto">
+							<div className="space-y-1 sm:space-y-3">
 								{selectedExperience.bulletArray.map((bullet, index) => (
 									<div
 										key={`${selectedExperience.company}-modal-bullet-${index}`}
-										className="group flex items-start gap-4 p-3 rounded-xl hover:bg-content2/10 transition-all duration-200"
+										className="group flex items-start gap-2 sm:gap-4 p-1.5 sm:p-3 rounded-xl hover:bg-content2/10 transition-all duration-200"
 									>
-										<div className="flex-shrink-0 w-3 h-3 bg-foreground rounded-full mt-2 group-hover:scale-110 transition-transform duration-200"></div>
-										<span className="text-base text-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-200">
+										<div className="flex-shrink-0 w-1.5 sm:w-3 h-1.5 sm:h-3 bg-foreground rounded-full mt-1.5 sm:mt-2.5 group-hover:scale-110 transition-transform duration-200"></div>
+										<span className="text-xs sm:text-base text-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-200">
 											{bullet}
 										</span>
 									</div>
@@ -192,17 +192,17 @@ const ImagePopup = ({
 					animate={{ scale: 1, opacity: 1 }}
 					exit={{ scale: 0.8, opacity: 0 }}
 					transition={{ type: "spring", duration: 0.5 }}
-					className="relative max-w-4xl max-h-[90vh] w-full"
+					className="relative max-w-4xl max-h-[90vh] w-full mx-2 sm:mx-0"
 					onClick={(e) => e.stopPropagation()}
 				>
 					{/* Close button */}
 					<button
 						type="button"
 						onClick={onClose}
-						className="absolute -top-12 right-0 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-colors duration-200"
+						className="absolute -top-8 sm:-top-12 right-0 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-colors duration-200"
 						aria-label="Close image popup"
 					>
-						<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+						<svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 							<title>Close icon</title>
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
 						</svg>
@@ -220,11 +220,11 @@ const ImagePopup = ({
 					</div>
 
 					{/* Image info */}
-					<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-						<h3 className="text-white text-xl font-semibold mb-1">
+					<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6 rounded-b-lg">
+						<h3 className="text-white text-lg sm:text-xl font-semibold mb-1">
 							{selectedExperience.company}
 						</h3>
-						<p className="text-white/80 text-sm">
+						<p className="text-white/80 text-xs sm:text-sm">
 							{selectedExperience.role}
 						</p>
 					</div>
@@ -240,9 +240,9 @@ export default function ExperiencePage() {
 	const [showImagePopup, setShowImagePopup] = useState(false);
 
 	return (
-		<div className="relative mx-auto max-w-7xl font-montserrat py-12 px-6 md:px-8">
+		<div className="relative mx-auto max-w-7xl font-montserrat py-8 sm:py-12 px-4 sm:px-6 md:px-8">
 			{/* Hero Section */}
-			<section className="text-center mb-16 pt-8">
+			<section className="text-center mb-12 sm:mb-16 pt-4 sm:pt-8">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ export default function ExperiencePage() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-						className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto mb-12 leading-relaxed font-normal mt-8"
+						className="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-normal mt-6 sm:mt-8 px-2"
 					>
 						A comprehensive overview of my professional journey, showcasing
 						diverse experiences across technology, culinary arts, and business
@@ -268,7 +268,7 @@ export default function ExperiencePage() {
 			</section>
 
 			{/* Experience Timeline */}
-			<section className="space-y-12">
+			<section className="space-y-8 sm:space-y-12">
 				{experienceData.map((experience: ExperienceItem, index: number) => (
 					<motion.div
 						key={`${experience.company}-${experience.role}`}
