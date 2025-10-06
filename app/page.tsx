@@ -29,14 +29,14 @@ export default function Home() {
   ];
   
   return (
-        <div className="relative mx-auto max-w-6xl font-montserrat py-12 px-6 md:px-8">
+        <div className="relative w-full font-montserrat py-4 sm:py-8 md:py-12 px-2 sm:px-4 md:px-6 lg:px-8">
       {/* Hero Section */}
-      <section className="text-center mb-20 pt-8">
+      <section className="text-center mb-8 sm:mb-12 md:mb-20 pt-4 sm:pt-6 md:pt-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="max-w-4xl mx-auto"
+          className="w-full"
         >
           <TextGenerateEffect
             className={title({ size: "lg", color: "foreground" })}
@@ -47,7 +47,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto mb-16 leading-relaxed font-normal mt-8"
+            className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 leading-relaxed font-normal mt-4 sm:mt-6 md:mt-8"
           >
             TypeScript, React.js, Next.js, LangChain, RAG pipelines, OpenAI. Building scalable applications that solve complex business problems.
           </motion.p>
@@ -56,14 +56,14 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.5, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex gap-6 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center"
           >
             <Link
               href="/projects"
-              className="group relative px-10 py-3.5 bg-gradient-to-r from-button-primary-500 to-button-primary-700 dark:from-button-primary-dark-500 dark:to-button-primary-dark-700 text-white rounded-xl font-medium transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-[1.02] backdrop-blur-md"
+              className="group relative px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 bg-gradient-to-r from-button-primary-500 to-button-primary-700 dark:from-button-primary-dark-500 dark:to-button-primary-dark-700 text-white rounded-xl font-medium transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-[1.02] backdrop-blur-md text-sm sm:text-base"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-90" fill="currentColor" viewBox="0 0 20 20" aria-label="Projects icon">
+                <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-90" fill="currentColor" viewBox="0 0 20 20" aria-label="Projects icon">
                   <title>Projects icon</title>
                   <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clipRule="evenodd" />
                 </svg>
@@ -73,10 +73,10 @@ export default function Home() {
             </Link>
             <Link
               href="/about"
-              className="group relative px-10 py-3.5 bg-white/50 dark:bg-white/5 backdrop-blur-xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 rounded-xl font-medium transition-all duration-500 shadow-md hover:shadow-lg hover:scale-[1.02] hover:bg-white/70 dark:hover:bg-white/10"
+              className="group relative px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 bg-white/50 dark:bg-white/5 backdrop-blur-xl text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 rounded-xl font-medium transition-all duration-500 shadow-md hover:shadow-lg hover:scale-[1.02] hover:bg-white/70 dark:hover:bg-white/10 text-sm sm:text-base"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-80" fill="currentColor" viewBox="0 0 20 20" aria-label="Info icon">
+                <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-500 group-hover:translate-x-0.5 opacity-80" fill="currentColor" viewBox="0 0 20 20" aria-label="Info icon">
                   <title>Info icon</title>
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                 </svg>
@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Stats Grid */}
-      <section className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-24 max-w-5xl mx-auto">
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 w-full">
         {[
           { number: "5+", label: "Years Experience" },
           { number: "11", label: "Projects" },
@@ -110,20 +110,20 @@ export default function Home() {
       </section>
 
       {/* Project Showcase */}
-      <section className="mb-28">
+      <section className="mb-8 sm:mb-20 md:mb-28">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-[1.75rem] font-medium text-foreground mb-6 tracking-tight">
+          <h2 className="text-[1.75rem] font-medium text-foreground mb-3 sm:mb-4 md:mb-6 tracking-tight">
             Recent Work
           </h2>
           <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
         </motion.div>
         
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -132,10 +132,10 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
               viewport={{ once: true }}
-              className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-fit"
+              className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-fit"
             >
               {/* Header Section */}
-              <div className="flex justify-between items-start mb-6">
+              <div className="flex justify-between items-start mb-3 sm:mb-4 md:mb-6">
                 <h3 className="text-xl font-bold text-foreground leading-tight tracking-tight flex-1 pr-4  transition-colors duration-300">
                   {project.name}
                 </h3>
@@ -171,15 +171,15 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-          className="mb-12"
+          className="mb-6 sm:mb-8 md:mb-12"
         >
-          <h2 className="text-[1.75rem] font-medium text-foreground mb-6 tracking-tight">
+          <h2 className="text-[1.75rem] font-medium text-foreground mb-3 sm:mb-4 md:mb-6 tracking-tight">
             Technologies
           </h2>
           <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
         </motion.div>
         
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
           {topSkills.map((skill, index) => (
             <motion.div
               key={skill}

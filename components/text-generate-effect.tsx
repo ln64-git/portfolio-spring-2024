@@ -46,7 +46,7 @@ export const TextGenerateEffect = ({
 
 	const renderWords = () => {
 		return (
-			<motion.div ref={scope}>
+			<motion.div ref={scope} className="w-full">
 				{wordsArray.map((word, index) => {
 					if (index === 0 || index === 3 || index === 6) {
 						return (
@@ -70,7 +70,7 @@ export const TextGenerateEffect = ({
 	return (
 		<div className={cn("font-bold", className)}>
 			<div className="mt-4 ">
-				<div className="text-foreground text-2xl leading-snug tracking-wide">
+				<div className="text-foreground text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-snug tracking-wide">
 					{renderWords()}
 				</div>
 			</div>

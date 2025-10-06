@@ -28,14 +28,14 @@ export const Navbar = () => {
 	const path = usePathname();
 	useEffect(() => {
 		setNavbarMenuOpen(false);
-	}, [path]);
+	}, []);
 
 	return (
 		<NextUINavbar
 			isMenuOpen={navbarMenuOpen}
-			maxWidth="xl"
+			maxWidth="full"
 			position="sticky"
-			className="bg-transparent backdrop-blur-sm px-2"
+			className="bg-transparent backdrop-blur-sm px-4 sm:px-6 md:px-8"
 		>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-2 max-w-fit">

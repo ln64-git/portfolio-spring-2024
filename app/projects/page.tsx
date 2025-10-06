@@ -199,9 +199,9 @@ export default function ProjectsPage() {
 				);
 
   return (
-		<div className="relative mx-auto max-w-7xl font-montserrat py-12 px-6 md:px-8">
+		<div className="relative mx-auto max-w-7xl font-montserrat py-4 sm:py-8 md:py-12 px-4 sm:px-6 md:px-8">
 			{/* Hero Section */}
-			<section className="text-center mb-16 pt-8">
+			<section className="text-center mb-8 sm:mb-12 md:mb-16 pt-4 sm:pt-6 md:pt-8">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export default function ProjectsPage() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-						className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto mb-12 leading-relaxed font-normal mt-8"
+						className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed font-normal mt-4 sm:mt-6 md:mt-8"
 					>
 						A collection of projects showcasing expertise in AI-driven
 						automation, full-stack development, and innovative system design.
