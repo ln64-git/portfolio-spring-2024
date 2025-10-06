@@ -29,9 +29,9 @@ export default function Home() {
   ];
   
   return (
-        <div className="relative w-full font-montserrat py-4 sm:py-8 md:py-12 px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="relative w-full font-montserrat py-4 sm:py-8 md:py-12 px-2 sm:px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Hero Section */}
-      <section className="text-center mb-8 sm:mb-12 md:mb-20 pt-4 sm:pt-6 md:pt-8">
+      <section className="text-center mb-6 sm:mb-8 md:mb-12 pt-2 sm:pt-4 md:pt-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,14 +40,14 @@ export default function Home() {
         >
           <TextGenerateEffect
             className={title({ size: "lg", color: "foreground" })}
-            words="Full-stack developer specializing in AI-driven automation and intelligent systems."
+            words="Full-stack developer specializing in AI-driven automation and intelligent systems"
           />
           
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 leading-relaxed font-normal mt-4 sm:mt-6 md:mt-8"
+            className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed font-normal mt-3 sm:mt-4 md:mt-6"
           >
             TypeScript, React.js, Next.js, LangChain, RAG pipelines, OpenAI. Building scalable applications that solve complex business problems.
           </motion.p>
@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Stats Grid */}
-      <section className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 w-full">
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 sm:mb-10 md:mb-12 w-full max-w-4xl mx-auto">
         {[
           { number: "5+", label: "Years Experience" },
           { number: "11", label: "Projects" },
@@ -110,12 +110,12 @@ export default function Home() {
       </section>
 
       {/* Project Showcase */}
-      <section className="mb-8 sm:mb-20 md:mb-28">
+      <section className="mb-6 sm:mb-12 md:mb-16">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-8 sm:mb-12 md:mb-16"
+          className="text-center mb-6 sm:mb-8 md:mb-10"
         >
           <h2 className="text-[1.75rem] font-medium text-foreground mb-3 sm:mb-4 md:mb-6 tracking-tight">
             Recent Work
@@ -123,7 +123,7 @@ export default function Home() {
           <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
         </motion.div>
         
-        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start max-w-6xl mx-auto">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -166,12 +166,12 @@ export default function Home() {
       </section>
 
       {/* Tech Bubble Cloud */}
-      <section className="text-center pb-16">
+      <section className="text-center pb-8 sm:pb-12 md:pb-16">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-          className="mb-6 sm:mb-8 md:mb-12"
+          className="mb-4 sm:mb-6 md:mb-8"
         >
           <h2 className="text-[1.75rem] font-medium text-foreground mb-3 sm:mb-4 md:mb-6 tracking-tight">
             Technologies
@@ -179,7 +179,7 @@ export default function Home() {
           <div className="w-12 h-px bg-gradient-to-r from-transparent via-default-600 to-transparent mx-auto"></div>
         </motion.div>
         
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full max-w-4xl mx-auto">
           {topSkills.map((skill, index) => (
             <motion.div
               key={skill}

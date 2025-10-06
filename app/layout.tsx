@@ -40,7 +40,7 @@ export default function RootLayout({
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative min-h-screen ">
+					<div className="relative min-h-screen">
 						<AuroraBackground className="">
 							{/* <ScrollShadow hideScrollBar  size={50}> */}
 							<div className="relative z-10">

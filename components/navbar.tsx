@@ -31,12 +31,14 @@ export const Navbar = () => {
 	}, []);
 
 	return (
-		<NextUINavbar
-			isMenuOpen={navbarMenuOpen}
-			maxWidth="full"
-			position="static"
-			className="bg-transparent backdrop-blur-sm px-4 sm:px-6 md:px-8"
-		>
+		<div className="w-full bg-transparent backdrop-blur-sm">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+				<NextUINavbar
+					isMenuOpen={navbarMenuOpen}
+					maxWidth="full"
+					position="static"
+					className="bg-transparent"
+				>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-2 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
@@ -139,6 +141,8 @@ export const Navbar = () => {
 					))}
 				</div>
 			</NavbarMenu>
-		</NextUINavbar>
+				</NextUINavbar>
+			</div>
+		</div>
 	);
 };

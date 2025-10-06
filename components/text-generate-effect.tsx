@@ -46,9 +46,23 @@ export const TextGenerateEffect = ({
 
 	const renderWords = () => {
 		return (
-			<motion.div ref={scope} className="w-full">
+			<motion.div 
+				ref={scope} 
+				className="w-full" 
+				style={{ 
+					wordSpacing: '0.1em',
+					hyphens: 'auto',
+					hyphenateLimitChars: '6 3 3',
+					orphans: 2,
+					widows: 2,
+					lineHeight: '1.2'
+				}}
+			>
 				{wordsArray.map((word, index) => {
-					if (index === 0 || index === 3 || index === 6) {
+					// Remove hardcoded line breaks and let CSS handle natural wrapping
+					// Only add line breaks for specific highlighted words to create visual emphasis
+					if (index === 0) {
+						// Break after "Full-stack" for visual emphasis
 						return (
 							<motion.span key={word} className={wordClasses(index)}>
 								{`${word} `}
@@ -69,8 +83,15 @@ export const TextGenerateEffect = ({
 
 	return (
 		<div className={cn("font-bold", className)}>
-			<div className="mt-4 ">
-				<div className="text-foreground text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-snug tracking-wide">
+			<div className="mt-4">
+				<div 
+					className="text-foreground text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-snug tracking-wide"
+					style={{
+						wordBreak: 'keep-all',
+						overflowWrap: 'break-word',
+						hyphens: 'auto'
+					}}
+				>
 					{renderWords()}
 				</div>
 			</div>

@@ -18,12 +18,12 @@ export const AuroraBackground = ({
 		<div className="relative h-full">
 			<div
 				className={cn(
-					"absolute  flex justify-center top-0 left-0 w-full h-[400px] transition-bg",
+					"absolute flex justify-center top-0 left-0 w-full h-[400px] transition-bg",
 					className,
 				)}
 				{...props}
 			>
-				<div className="absolute mx-auto w-full mt-16 rounded-lg inset-0 overflow-hidden">
+				<div className="absolute mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 mt-16 rounded-lg inset-0 overflow-hidden">
 					<div
 						className={cn(
 							`
