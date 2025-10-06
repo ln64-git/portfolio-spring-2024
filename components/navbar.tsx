@@ -34,7 +34,7 @@ export const Navbar = () => {
 		<NextUINavbar
 			isMenuOpen={navbarMenuOpen}
 			maxWidth="full"
-			position="sticky"
+			position="static"
 			className="bg-transparent backdrop-blur-sm px-4 sm:px-6 md:px-8"
 		>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -128,7 +128,11 @@ export const Navbar = () => {
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navItems.map((item) => (
 						<NavbarMenuItem key={item.href}>
-							<NextLink color="foreground" href={item.href}>
+							<NextLink 
+								color="foreground" 
+								href={item.href}
+								onClick={() => setNavbarMenuOpen(false)}
+							>
 								{item.label}
 							</NextLink>
 						</NavbarMenuItem>
