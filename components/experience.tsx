@@ -27,13 +27,13 @@ export default function Experience(data: JobProps) {
       
       <div className="relative z-10">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row items-start gap-2 sm:gap-4 md:gap-6 lg:gap-8 mb-3 sm:mb-6 md:mb-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-3 sm:mb-6 md:mb-8">
           {/* Company Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05, y: -2 }}
-            className="flex-shrink-0 w-full sm:w-auto"
-          >
-            <div className="w-full sm:w-40 sm:h-28 lg:w-48 lg:h-32 rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-content2/10 to-content2/5 flex items-center justify-center">
+        <motion.div
+          whileHover={{ scale: 1.05, y: -2 }}
+          className="flex-shrink-0 w-32 h-20 sm:w-48 sm:h-32 lg:w-56 lg:h-36 mx-auto sm:mx-0"
+        >
+            <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-content2/10 to-content2/5 flex items-center justify-center">
               <Image
                 width={224}
                 height={144}
@@ -45,7 +45,7 @@ export default function Experience(data: JobProps) {
           </motion.div>
 
           {/* Company Info */}
-          <div className="flex-1 text-left w-full">
+          <div className="flex-1 text-center lg:text-left w-full">
             <motion.h3
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function Experience(data: JobProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex flex-row items-center gap-2 sm:gap-3 md:gap-4"
+              className="flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4"
             >
               <span className="text-xs sm:text-sm text-muted-foreground bg-primary/10 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full">
                 {startDate}

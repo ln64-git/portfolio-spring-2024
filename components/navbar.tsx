@@ -11,7 +11,6 @@ import {
 } from "@nextui-org/navbar";
 import clsx from "clsx";
 import NextLink from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
 	DiscordIcon,
@@ -25,7 +24,6 @@ import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
 	const [navbarMenuOpen, setNavbarMenuOpen] = useState(false);
-	const path = usePathname();
 	useEffect(() => {
 		setNavbarMenuOpen(false);
 	}, []);
@@ -43,22 +41,25 @@ export const Navbar = () => {
 				<NavbarBrand as="li" className="gap-2 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Logo />
-						<p className="font-semibold text-gray-900 dark:text-white text-lg">
+						<p className="font-semibold text-foreground text-lg">
 							Luke Anthony
 						</p>
 					</NextLink>
 				</NavbarBrand>
-				<ul className="hidden lg:flex gap-3 justify-start ml-4">
+				<ul className="hidden lg:flex gap-1 justify-start ml-4">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
 								className={clsx(
-									"text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 font-medium text-sm",
-									"data-[active=true]:text-blue-600 dark:data-[active=true]:text-blue-400 data-[active=true]:font-semibold",
+									"text-muted-foreground hover:text-foreground transition-all duration-300 font-medium text-sm px-3 py-2 rounded-full",
+									"hover:scale-105",
+									"data-[active=true]:text-primary data-[active=true]:font-semibold data-[active=true]:bg-primary/10 data-[active=true]:scale-105",
+									"group relative overflow-hidden"
 								)}
 								href={item.href}
 							>
-								{item.label}
+								<span className="relative z-10">{item.label}</span>
+								<div className="absolute inset-0 rounded-full bg-content1/60 dark:bg-content1/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></div>
 							</NextLink>
 						</NavbarItem>
 					))}
@@ -76,7 +77,7 @@ export const Navbar = () => {
 						aria-label="Discord"
 						className="hover:scale-110 transition-transform duration-200"
 					>
-						<DiscordIcon className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200" />
+						<DiscordIcon className="text-muted-foreground hover:text-foreground transition-colors duration-200" />
 					</Link>
 					<Link
 						isExternal
@@ -84,7 +85,7 @@ export const Navbar = () => {
 						aria-label="Twitter"
 						className="hover:scale-110 transition-transform duration-200"
 					>
-						<TwitterIcon className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200" />
+						<TwitterIcon className="text-muted-foreground hover:text-foreground transition-colors duration-200" />
 					</Link>
 					<Link
 						isExternal
@@ -92,7 +93,7 @@ export const Navbar = () => {
 						aria-label="LinkedIn"
 						className="hover:scale-110 transition-transform duration-200"
 					>
-						<LinkedinIcon className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200" />
+						<LinkedinIcon className="text-muted-foreground hover:text-foreground transition-colors duration-200" />
 					</Link>
 					<Link
 						isExternal
@@ -100,7 +101,7 @@ export const Navbar = () => {
 						aria-label="Github"
 						className="hover:scale-110 transition-transform duration-200"
 					>
-						<GithubIcon className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200" />
+						<GithubIcon className="text-muted-foreground hover:text-foreground transition-colors duration-200" />
 					</Link>
 					<ThemeSwitch />
 				</NavbarItem>
@@ -127,15 +128,16 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarMenu>
-				<div className="mx-4 mt-2 flex flex-col gap-2">
+				<div className="mx-4 mt-2 flex flex-col gap-1">
 					{siteConfig.navItems.map((item) => (
 						<NavbarMenuItem key={item.href}>
 							<NextLink 
-								color="foreground" 
+								className="text-muted-foreground hover:text-foreground transition-all duration-300 font-medium text-sm px-3 py-2 rounded-full hover:scale-105 group relative overflow-hidden"
 								href={item.href}
 								onClick={() => setNavbarMenuOpen(false)}
 							>
-								{item.label}
+								<span className="relative z-10">{item.label}</span>
+								<div className="absolute inset-0 rounded-full bg-content1/60 dark:bg-content1/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></div>
 							</NextLink>
 						</NavbarMenuItem>
 					))}
