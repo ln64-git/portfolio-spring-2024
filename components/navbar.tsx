@@ -59,7 +59,7 @@ export const Navbar = () => {
 								href={item.href}
 							>
 								<span className="relative z-10">{item.label}</span>
-								<div className="absolute inset-0 rounded-full bg-content1/60 dark:bg-content1/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></div>
+								<div className="absolute inset-0 rounded-lg bg-content1/60 dark:bg-content1/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></div>
 							</NextLink>
 						</NavbarItem>
 					))}
