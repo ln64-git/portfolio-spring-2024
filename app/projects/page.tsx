@@ -6,13 +6,91 @@ import { title } from "@/components/primitives";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import projectData from "../../content/project-data";
 
-// Project Modal Component
-const ProjectModal = ({
+// Image Popup Component
+const ImagePopup = ({
 	selectedProject,
 	onClose,
 }: {
 	selectedProject: (typeof projectData)[0] | null;
 	onClose: () => void;
+}) => {
+	if (!selectedProject) return null;
+
+	return (
+		<AnimatePresence>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				exit={{ opacity: 0 }}
+				className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+				onClick={onClose}
+			>
+				<motion.div
+					initial={{ scale: 0.8, opacity: 0 }}
+					animate={{ scale: 1, opacity: 1 }}
+					exit={{ scale: 0.8, opacity: 0 }}
+					transition={{ type: "spring", duration: 0.5 }}
+					className="relative max-w-4xl max-h-[90vh] w-full mx-2 sm:mx-0"
+					onClick={(e) => e.stopPropagation()}
+				>
+					{/* Close button */}
+					<button
+						type="button"
+						onClick={onClose}
+						className="absolute -top-8 sm:-top-12 right-0 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-colors duration-200"
+						aria-label="Close image popup"
+					>
+						<svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							<title>Close icon</title>
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+
+					{/* Image */}
+					<div className="relative w-full h-full">
+						<motion.div
+							initial={{ opacity: 0, scale: 0.8 }}
+							animate={{ opacity: 1, scale: 1 }}
+							transition={{ 
+								duration: 0.6, 
+								ease: [0.25, 0.1, 0.25, 1] 
+							}}
+							className="w-full h-full"
+						>
+							<Image
+								src={`/${selectedProject.image}.png`}
+								alt={selectedProject.name}
+								width={800}
+								height={600}
+								className="w-full h-full object-contain rounded-lg"
+							/>
+						</motion.div>
+					</div>
+
+					{/* Image info */}
+					<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6 rounded-b-lg">
+						<h3 className="text-white text-lg sm:text-xl font-semibold mb-1">
+							{selectedProject.name}
+						</h3>
+						<p className="text-white/80 text-xs sm:text-sm">
+							{selectedProject.date}
+						</p>
+					</div>
+				</motion.div>
+			</motion.div>
+		</AnimatePresence>
+	);
+};
+
+// Project Modal Component
+const ProjectModal = ({
+	selectedProject,
+	onClose,
+	onImageClick,
+}: {
+	selectedProject: (typeof projectData)[0] | null;
+	onClose: () => void;
+	onImageClick: () => void;
 }) => {
 	if (!selectedProject) return null;
 
@@ -60,15 +138,35 @@ const ProjectModal = ({
 					<div className="grid md:grid-cols-2 gap-12">
 						{/* Left Column - Image and Tech Stack */}
 						<div className="space-y-8">
-							<div className="overflow-hidden rounded-3xl">
+							<button 
+								type="button"
+								className="relative group w-full cursor-pointer border-none bg-transparent p-0 overflow-hidden rounded-3xl"
+								onClick={onImageClick}
+								onKeyDown={(e) => {
+									if (e.key === 'Enter' || e.key === ' ') {
+										e.preventDefault();
+										onImageClick();
+									}
+								}}
+								aria-label={`View full image of ${selectedProject.name}`}
+							>
 								<Image
 									src={`/${selectedProject.image}.png`}
 									alt={selectedProject.name}
 									width={700}
 									height={500}
-									className="w-full h-80 object-cover"
+									className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
 								/>
-							</div>
+								{/* Click hint overlay */}
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+									<div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
+										<svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+											<title>Magnifying glass icon</title>
+											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+										</svg>
+									</div>
+								</div>
+							</button>
 
 							{/* Tech Stack */}
 							<div>
@@ -144,6 +242,7 @@ export default function ProjectsPage() {
 	const [selectedProject, setSelectedProject] = useState<
 		(typeof projectData)[0] | null
 	>(null);
+	const [showImagePopup, setShowImagePopup] = useState(false);
 
 	// Categorize projects
 	const categories = {
@@ -365,7 +464,16 @@ export default function ProjectsPage() {
 			<ProjectModal
 				selectedProject={selectedProject}
 				onClose={() => setSelectedProject(null)}
+				onImageClick={() => setShowImagePopup(true)}
 			/>
+
+			{/* Image Popup */}
+			{showImagePopup && (
+				<ImagePopup
+					selectedProject={selectedProject}
+					onClose={() => setShowImagePopup(false)}
+				/>
+			)}
     </div>
   );
 }

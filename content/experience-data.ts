@@ -1,5 +1,17 @@
 const experienceData = [
 	{
+		company: "Aladdin's Eatery",
+		duration: "October 2024 - Current",
+		image: "aladdin",
+		role: "Kitchen Prep Cook",
+		summary:
+			"Collaborated with kitchen team to handle the majority of ingredient preparation for Lebanese-American dishes, optimize prep processes, and ensure high-quality food service for guests. Maintained kitchen hygiene, followed recipes meticulously, addressed food product concerns, and upheld strict food safety standards while working independently.",
+		bulletArray: [
+			"Conducted thorough quality checks on ingredients and techniques, providing insightful recommendations for improving prep efficiency and overall dish quality.",
+			"Demonstrated strong attention to detail and culinary skills by effectively managing prep tasks under minimal supervision, contributing to a seamless service and enhanced guest dining experience.",
+		],
+	},
+	{
 		company: "CinDay Academy",
 		duration: "February 2023 - September 2023",
 		image: "cinday",

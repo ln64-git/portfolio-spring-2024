@@ -98,7 +98,7 @@ const projectData = [
 		date: "May 2024",
 		summary:
 			"Developed a conversational AI assistant featuring real-time token streaming that chunks and sequences LLM responses across multiple provider models, enabling seamless integration between local and remote systems with concurrent audio synthesis. Implemented voice-to-voice pipeline using Whisper.cpp for transcription, Azure/Google TTS from sequenced chunks, and CLI/HTTP interface with auto-routing for scalable deployment.",
-		image: "database",
+		image: "sira",
 		techArray: ["typescript", "bun", "langchain", "openai", "azure", "whisper"],
 		githubUrl: "https://github.com/ln64-git/sira-conversational-ai",
 	},
