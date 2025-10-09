@@ -65,7 +65,7 @@ const projectData = [
 		date: "September 2024",
 		summary:
 			"Developed AI-powered moderation pipeline with RAG for behavioral detection/summaries, real-time voice management, and self-healing across 200+ users. Implemented Redis-cached sync, conflict resolution, and performance monitoring for scalable Discord community management.",
-		image: "splitscreen-video",
+		image: "arcados-bot",
 		techArray: [
 			"typescript",
 			"nodejs",

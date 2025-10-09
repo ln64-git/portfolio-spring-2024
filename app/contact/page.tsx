@@ -17,18 +17,26 @@ export default function ContactPage() {
   const sendEmail = (e: FormEvent) => {
 		e.preventDefault();
 		if (form.current) {
+			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_ut19eu5";
+			const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_k6z538t";
+			const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "k9dk_PHS4Rax1XBz_";
+
 			emailjs
 				.sendForm(
-					"service_ut19eu5",
-					"template_k6z538t",
+					serviceId,
+					templateId,
 					form.current,
-					"k9dk_PHS4Rax1XBz_",
+					publicKey,
 				)
 				.then(() => {
 					setEmailStatus("success");
+					// Reset form after successful submission
+					if (form.current) {
+						form.current.reset();
+					}
 				})
 				.catch((error: { text: string }) => {
-					console.log(error.text);
+					console.error("EmailJS Error:", error.text);
 					setEmailStatus("failure");
 				});
 		}
@@ -53,7 +61,7 @@ export default function ContactPage() {
 				</svg>
 			),
 			title: "Email",
-			value: "ln64.ohio@outlook.com",
+			value: "lukeanthony.ohio@outlook.com",
 			description: "Let's work together",
 		},
 		{
