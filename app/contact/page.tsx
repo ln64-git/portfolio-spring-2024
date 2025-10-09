@@ -17,9 +17,9 @@ export default function ContactPage() {
   const sendEmail = (e: FormEvent) => {
 		e.preventDefault();
 		if (form.current) {
-			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_ut19eu5";
-			const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_k6z538t";
-			const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "k9dk_PHS4Rax1XBz_";
+			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_1dblzlf";
+			const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_g3tzu8g";
+			const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "o3D2rVUVTeOVJMLHI";
 
 			emailjs
 				.sendForm(
