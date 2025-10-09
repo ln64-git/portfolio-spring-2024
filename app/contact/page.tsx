@@ -17,7 +17,7 @@ export default function ContactPage() {
   const sendEmail = (e: FormEvent) => {
 		e.preventDefault();
 		if (form.current) {
-			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_1dblzlf";
+			const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_14oxswn";
 			const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_g3tzu8g";
 			const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "o3D2rVUVTeOVJMLHI";
 
@@ -214,7 +214,7 @@ export default function ContactPage() {
 								<Input
 									color="primary"
 									type="text"
-									name="user_name"
+									name="name"
 									label="Name"
 									placeholder="Your full name"
 									className="w-full"
@@ -232,7 +232,7 @@ export default function ContactPage() {
 								<Input
 									color="primary"
 									type="email"
-									name="user_email"
+									name="email"
 									label="Email"
 									placeholder="your.email@example.com"
 									className="w-full"
@@ -258,6 +258,13 @@ export default function ContactPage() {
 									isRequired
 								/>
 						</motion.div>
+
+						{/* Hidden timestamp field */}
+						<input 
+							type="hidden" 
+							name="time" 
+							value={new Date().toLocaleString()}
+						/>
 
 						<motion.div
 							initial={{ opacity: 0, y: 10 }}
