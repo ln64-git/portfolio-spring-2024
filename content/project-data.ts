@@ -56,7 +56,7 @@ const projectData = [
 		date: "May 2025",
 		summary:
 			"Engineered Obsidian-native RAG pipeline with LangChain/Ollama for semantic note search, achieving 95% accuracy via bidirectional clustering and sub-second queries on unstructured Markdown. Implemented local Xenova Transformers for vector embeddings and cosine similarity analysis, enabling privacy-preserving topic extraction and automatic organization of journal entries and thoughts.",
-		image: "portfolio",
+		image: "luma",
 		techArray: ["typescript", "langchain", "ollama", "xenova", "rag"],
 		githubUrl: "https://github.com/ln64-git/luma-knowledge-engine",
 	},
@@ -82,7 +82,7 @@ const projectData = [
 		date: "October 2024",
 		summary:
 			"Developed a comprehensive map generation application using TypeScript and modern web technologies. Features algorithmic map creation, interactive visualization, and procedural generation capabilities. Demonstrates expertise in data visualization, algorithmic design, and user interface development with real-time rendering capabilities.",
-		image: "portfolio",
+		image: "map-generator",
 		techArray: [
 			"typescript",
 			"nextjs",

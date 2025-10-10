@@ -138,35 +138,35 @@ const ProjectModal = ({
 					<div className="grid md:grid-cols-2 gap-12">
 						{/* Left Column - Image and Tech Stack */}
 						<div className="space-y-8">
-							<button 
-								type="button"
-								className="relative group w-full cursor-pointer border-none bg-transparent p-0 overflow-hidden rounded-3xl"
-								onClick={onImageClick}
-								onKeyDown={(e) => {
-									if (e.key === 'Enter' || e.key === ' ') {
-										e.preventDefault();
-										onImageClick();
-									}
-								}}
-								aria-label={`View full image of ${selectedProject.name}`}
-							>
-								<Image
-									src={`/${selectedProject.image}.png`}
-									alt={selectedProject.name}
-									width={700}
-									height={500}
-									className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-								/>
-								{/* Click hint overlay */}
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
-									<div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
-										<svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-											<title>Magnifying glass icon</title>
-											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-										</svg>
-									</div>
+						<button 
+							type="button"
+							className="relative group w-full cursor-pointer border-none bg-transparent p-0 overflow-hidden rounded-3xl"
+							onClick={onImageClick}
+							onKeyDown={(e) => {
+								if (e.key === 'Enter' || e.key === ' ') {
+									e.preventDefault();
+									onImageClick();
+								}
+							}}
+							aria-label={`View full image of ${selectedProject.name}`}
+						>
+							<Image
+								src={`/${selectedProject.image}.png`}
+								alt={selectedProject.name}
+								width={700}
+								height={500}
+								className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+							/>
+							{/* Click hint overlay */}
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+								<div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
+									<svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+										<title>Magnifying glass icon</title>
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+									</svg>
 								</div>
-							</button>
+							</div>
+						</button>
 
 							{/* Tech Stack */}
 							<div>
@@ -366,16 +366,16 @@ export default function ProjectsPage() {
 							className="group bg-content1/50 dark:bg-content1/30 backdrop-blur-xl rounded-3xl p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 dark:hover:bg-content1/50 border border-content2/10 hover:border-content2/30 flex flex-col h-full cursor-pointer relative overflow-hidden"
 							onClick={() => setSelectedProject(project)}
 						>
-							{/* Project Image */}
-							<div className="mb-6 overflow-hidden rounded-2xl flex-shrink-0">
-								<Image
-									src={`/${project.image}.png`}
-									alt={project.name}
-									width={400}
-									height={192}
-									className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-								/>
-							</div>
+						{/* Project Image */}
+						<div className="mb-6 overflow-hidden rounded-2xl flex-shrink-0">
+							<Image
+								src={`/${project.image}.png`}
+								alt={project.name}
+								width={400}
+								height={192}
+								className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+							/>
+						</div>
 
 							{/* Project Header */}
 							<div className="flex justify-between items-start mb-4 flex-shrink-0">
