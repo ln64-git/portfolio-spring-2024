@@ -4,7 +4,7 @@ const projectData = [
 		date: "April 2025",
 		summary:
 			"Developed a decentralized, versioned, cryptographically-verifiable archive system designed to help people, conversations, and institutions preserve data securely across devices. Built with Rust for performance and security, featuring cryptographic verification and decentralized architecture for reliable data preservation.",
-		image: "database",
+		image: "arc",
 		techArray: [
 			"rust",
 			"decentralized",
@@ -19,7 +19,7 @@ const projectData = [
 		date: "June 2025",
 		summary:
 			"Built a sophisticated Text-to-Speech application using TypeScript and Bun runtime. Features multi-provider TTS support (Azure Cognitive Services and Google Cloud Text-to-Speech), custom AudioController with queue management and mpv integration, CLI interface for audio operations, and persistent state management. Demonstrates comprehensive testing with Vitest and advanced audio workflow management.",
-		image: "portfolio",
+		image: "nayru",
 		techArray: [
 			"typescript",
 			"dynamic-server",
@@ -37,7 +37,7 @@ const projectData = [
 		date: "August 2025",
 		summary:
 			"Engineered an automated bot using Puppeteer and Bun for sweepstakes platforms that exploits promotional credits by generating multiple accounts. Features intelligent account creation with realistic user data via RandomUser.me API, automated email verification through disposable mail services, form automation with fallback strategies, popup handling for promotional offers, and automated gameplay to claim welcome bonuses. Demonstrates advanced web automation, API integration, and reverse engineering of sweepstakes platform interfaces.",
-		image: "database",
+		image: "jackpota",
 		techArray: [
 			"typescript",
 			"bun",
