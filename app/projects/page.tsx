@@ -140,7 +140,7 @@ const ProjectModal = ({
 						<div className="space-y-8">
 						<button 
 							type="button"
-							className="relative group w-full cursor-pointer border-none bg-transparent p-0 overflow-hidden rounded-3xl"
+							className="relative group w-full h-80 cursor-pointer border-none bg-transparent p-0 rounded-3xl"
 							onClick={onImageClick}
 							onKeyDown={(e) => {
 								if (e.key === 'Enter' || e.key === ' ') {
@@ -150,15 +150,27 @@ const ProjectModal = ({
 							}}
 							aria-label={`View full image of ${selectedProject.name}`}
 						>
-							<Image
-								src={`/${selectedProject.image}.png`}
-								alt={selectedProject.name}
-								width={700}
-								height={500}
-								className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-							/>
+							<div className="relative w-full h-full overflow-hidden rounded-2xl flex items-center justify-center">
+								<motion.div
+									initial={{ opacity: 0, scale: 0.9 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{ 
+										duration: 0.6, 
+										ease: [0.25, 0.1, 0.25, 1] 
+									}}
+									className="w-full h-full flex items-center justify-center"
+								>
+									<Image
+										src={`/${selectedProject.image}.png`}
+										alt={selectedProject.name}
+										width={700}
+										height={500}
+										className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+									/>
+								</motion.div>
+							</div>
 							{/* Click hint overlay */}
-							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
 								<div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full p-3">
 									<svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 										<title>Magnifying glass icon</title>
@@ -412,14 +424,16 @@ export default function ProjectsPage() {
 							onClick={() => setSelectedProject(project)}
 						>
 						{/* Project Image */}
-						<div className="mb-6 overflow-hidden rounded-2xl flex-shrink-0">
-							<Image
-								src={`/${project.image}.png`}
-								alt={project.name}
-								width={400}
-								height={192}
-								className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-							/>
+						<div className="mb-6 flex-shrink-0 h-48 flex items-center justify-center">
+							<div className="relative max-w-full h-full overflow-hidden rounded-2xl flex items-center justify-center">
+								<Image
+									src={`/${project.image}.png`}
+									alt={project.name}
+									width={400}
+									height={192}
+									className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+								/>
+							</div>
 						</div>
 
 							{/* Project Header */}
