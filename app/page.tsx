@@ -137,10 +137,10 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
               viewport={{ once: true }}
-              className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-fit"
+              className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-[450px] flex flex-col"
             >
               {/* Header Section */}
-              <div className="flex justify-between items-start mb-3 sm:mb-4 md:mb-6">
+              <div className="flex justify-between items-start mb-3 sm:mb-4 md:mb-6 flex-shrink-0">
                 <h3 className="text-xl font-bold text-foreground leading-tight tracking-tight flex-1 pr-4  transition-colors duration-300">
                   {project.name}
                 </h3>
@@ -150,7 +150,7 @@ export default function Home() {
               </div>
               
               {/* Skills Section */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-6 flex-shrink-0">
                 {project.skills.split(", ").slice(0, 3).map((skill) => (
                   <span
                     key={skill}
@@ -162,7 +162,7 @@ export default function Home() {
               </div>
               
               {/* Description Section */}
-              <p className="text-foreground/70 text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300">
+              <p className="text-foreground/70 text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300 flex-grow overflow-hidden">
                 {project.summary}
               </p>
             </motion.div>
