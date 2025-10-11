@@ -25,7 +25,7 @@ export default function AboutPage() {
 			name: "Technical Infrastructure",
 			skills: skills3,
 			description:
-				"Through Technical Infrastructure and systems engineering, I prototype fast with Rust, Bun, or Node, then reinforce with secure databases-local by default, cloud only for speed. Logic balances low-level efficiency with high-level clarity, optimizing workload between user and server. Five years taught me: build quick, prove it, distribute smart, and lock it down.",
+				"Through Technical Infrastructure and systems engineering, I prototype fast with Rust, Bun, or Node, then reinforce with secure databases-local by default, cloud only for speed. Logic balances low-level efficiency with high-level clarity, optimizing workload between user and server. I've learned to build quick, prove it, distribute smart, then lock it down.",
 			color: "from-orange-500 to-red-600",
 		},
 	];
