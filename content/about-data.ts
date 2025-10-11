@@ -27,7 +27,7 @@ const aboutData = {
 	],
 	skills3: [
 		["Node.js", 5],
-		["Linux Systems", 5],
+		["Linux", 5],
 		["Git", 5],
 		["Bun Runtime", 3],
 		["MongoDB", 3],
