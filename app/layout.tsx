@@ -19,10 +19,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "white" },
-		{ media: "(prefers-color-scheme: dark)", color: "black" },
-	],
+	themeColor: "black",
 };
 
 export default function RootLayout({
@@ -39,7 +36,7 @@ export default function RootLayout({
 					fontSans.variable,
 				)}
 			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+				<Providers themeProps={{ attribute: "class", defaultTheme: "dark", enableSystem: false }}>
 					<div className="relative min-h-screen">
 						<AuroraBackground className="">
 							{/* <ScrollShadow hideScrollBar  size={50}> */}
