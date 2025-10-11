@@ -115,9 +115,9 @@ export default function ContactPage() {
 	];
 
 	return (
-		<div className="relative mx-auto max-w-7xl font-montserrat py-4 sm:py-8 md:py-6 px-4 sm:px-6 md:px-8">
+		<div className="relative mx-auto max-w-7xl font-montserrat  sm:py-8 md:py-4 px-4 sm:px-6 md:px-8">
 			{/* Hero Section */}
-			<section className="text-center mb-8 sm:mb-12 md:mb-16 pt-4 sm:pt-6 md:pt-2">
+			<section className="text-center mb-6 sm:mb-12 md:mb-16 pt-2 sm:pt-4 md:pt-4">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -128,6 +128,7 @@ export default function ContactPage() {
 						className={title({ size: "lg", color: "foreground" })}
 						words="Let's Build Something Amazing Together"
 						highlightedWords={[
+							{ word: "Let's", color: "violet" }
 						]}
 					/>
 
