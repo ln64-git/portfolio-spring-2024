@@ -5,10 +5,10 @@ const experienceData = [
 		image: "aladdin",
 		role: "Kitchen Prep Cook",
 		summary:
-			"Collaborated with kitchen team to handle the majority of ingredient preparation for Lebanese-American dishes, optimize prep processes, and ensure high-quality food service for guests. Maintained kitchen hygiene, followed recipes meticulously, addressed food product concerns, and upheld strict food safety standards while working independently.",
+			"Streamlined ingredient prep for Lebanese-American dishes with a lean team—optimized workflows, kept quality razor-sharp, fed guests without a hitch. Upheld hygiene and safety standards solo, tracked stock with precision, tackled issues before they scaled.",
 		bulletArray: [
-			"Conducted thorough quality checks on ingredients and techniques, providing insightful recommendations for improving prep efficiency and overall dish quality.",
-			"Demonstrated strong attention to detail and culinary skills by effectively managing prep tasks under minimal supervision, contributing to a seamless service and enhanced guest dining experience.",
+			"Ran quality audits on ingredients and methods, slashing waste and lifting dish consistency with optimized strategies.",
+			"Nailed prep tasks under zero oversight, ensuring seamless flow and a top-notch dining vibe every shift.",
 		],
 	},
 	{
@@ -17,10 +17,10 @@ const experienceData = [
 		image: "cinday",
 		role: "IT Assistant",
 		summary:
-			"Collaborated with administration to enhance technology usage, optimize information systems, and provide exceptional support for students and faculty. Maintained IT infrastructure, addressed hardware/software concerns, and ensured system-wide security.",
+			"Collaborated closely with an IT team to enhance technology systems, maintain infrastructure, troubleshoot hardware and software issues, and uphold stringent security measures for students and faculty.",
 		bulletArray: [
-			"Conducted thorough quality control testing and provided insightful recommendations for improving IT processes and procedures.",
-			"Demonstrated strong problem-solving skills by effectively addressing technical issues and implementing solutions to enhance the overall IT experience for users.",
+			"Led detailed quality assessments of IT processes, implementing practical improvements that boosted efficiency and user satisfaction.",
+			"Built a Next.js React app with Prisma and Redux, automating device management and ticket routing to slash support load by half.",
 		],
 	},
 
@@ -30,10 +30,10 @@ const experienceData = [
 		image: "tech-elevator",
 		role: "Student",
 		summary:
-			"Successfully completed an intensive 14-week coding bootcamp, gaining proficiency in full-stack web development technologies through over 800 hours of hands-on experience. Adapted to paired programming, Agile methodology, and version source control strategies.",
+			"Grinded through a 14-week bootcamp—800+ hours of coding—mastering Java, HTML, CSS, JS frameworks, and SQL. Adapted to Agile, paired coding, and Git in the trenches.",
 		bulletArray: [
-			"Developed a strong foundation in Java, HTML, CSS, modern JavaScript frameworks, and SQL, showcasing the ability to learn and apply new technologies quickly.",
-			"Collaborated effectively with peers on various projects, demonstrating strong teamwork and communication skills.",
+			"Built a solid base in full-stack tech, proving I can learn and ship fast under pressure.",
+			"Teamed up on projects, syncing with peers to deliver clean code without ego clashes.",
 		],
 	},
 	{
@@ -42,10 +42,10 @@ const experienceData = [
 		image: "citizens",
 		role: "Commissary Chef",
 		summary:
-			"Oversaw inventory management and large-scale recipe execution, ensuring timely deliveries to multiple restaurant locations while handling invoices and orders with precision.",
+			"Managed inventory and scaled recipe production, ensuring on-time deliveries to five restaurant locations while handling invoices and orders with surgical precision.",
 		bulletArray: [
-			"Prioritized tasks amid changing demands, maintaining accurate inventory to support seamless operations across 5 storefronts.",
-			"Demonstrated strong organizational skills and attention to detail in managing complex inventory systems.",
+			"Juggled shifting priorities, keeping inventory tight to drive flawless operations across all storefronts.",
+			"Mastered complex inventory tracking with sharp focus, ensuring every item moved without a hitch.",
 		],
 	},
 	{
@@ -54,10 +54,10 @@ const experienceData = [
 		image: "habanero",
 		role: "Line Cook",
 		summary:
-			"Consistently delivered exceptional customer service and maintained a clean and efficient workstation in a fast-paced culinary environment. Contributed to ensuring a high-quality dining experience for customers.",
+			"Top-notch service, maintaining a spotless, efficient station in a high-speed kitchen. Delivered consistent, high-quality dishes to keep customers coming back.",
 		bulletArray: [
-			"Demonstrated strong attention to detail and quality control, ensuring that each dish met the highest standards of presentation and taste.",
-			"Worked collaboratively with team members to maintain a smooth and efficient workflow during peak hours.",
+			"Locked in detail and quality control, ensuring every plate hit the mark for taste and presentation.",
+			"Teamed up seamlessly during rushes, keeping the workflow tight and the kitchen on track.",
 		],
 	},
 	{
@@ -66,10 +66,10 @@ const experienceData = [
 		image: "kaze",
 		role: "Sushi Assistant",
 		summary:
-			"Honed sushi presentation skills while effectively managing inventory and supply based on seasonal availability. Consistently delivered top-quality sushi dishes, demonstrating a keen eye for detail and a commitment to excellence.",
+			"Sharpened sushi presentation with a focus on quality, managing inventory and supplies tailored to seasonal shifts with a steady hand. Delivered flawless dishes every shift, proving a razor-sharp eye for detail.",
 		bulletArray: [
-			"Quickly learned and applied advanced sushi preparation techniques, showcasing a strong ability to acquire new skills and adapt to different culinary styles.",
-			"Proactively communicated with team members to ensure optimal inventory levels and minimize waste.",
+			"Picked up advanced sushi techniques fast, adapting to new styles with ease and boosting prep speed.",
+			"Coordinated with the team to keep inventory lean, cutting waste while keeping the line stocked.",
 		],
 	},
 	{
@@ -78,10 +78,10 @@ const experienceData = [
 		image: "rookwood",
 		role: "Inventory Manager",
 		summary:
-			"Oversaw 80,000+ pre-fired art/pottery and ceramic products, optimizing interdepartmental exchanges for in-house and external clients in hospitality and restoration projects. Applied organizational and analytical skills to track complex inventory systems.",
+			"Oversaw 80,000+ SKU ceramics inventory—pre-fired art and tiles for hospitality and restoration—routing exchanges across departments with zero slip-ups. Handled seasonal demands and deliveries in a vast 88,000 sq ft space, stepping up to the youngest department manager at 18 after a summer internship.",
 		bulletArray: [
-			"Applied organizational and analytical skills to track complex inventory systems, fostering client and colleague relationships for efficient exchanges and high satisfaction.",
-			"Collaborated closely with managers to optimize product exchange between departments, serving diverse clients.",
+			"Optimized logistics for diverse clients, cutting fulfillment times and building trust with partners valuing Rookwood's handcrafted legacy.",
+			"Mastered predictive stock rotation, minimizing breakage and sharpening the data-handling skills that later shaped tech builds.",
 		],
 	},
 ];

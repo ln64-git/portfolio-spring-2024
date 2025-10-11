@@ -6,25 +6,25 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import { topSkills } from "@/content/home-data";
 
 export default function Home() {
-  // Highlight Luma, Arcados bot, and Sira projects
+  // Highlight Arc, Luma, and Sira projects
   const featuredProjects = [
     {
-      name: "Luma AI Knowledge Engine",
-      date: "May 2025",
-      skills: "TypeScript, LangChain, Ollama, Xenova, RAG",
-      summary: "Engineered Obsidian-native RAG pipeline with LangChain/Ollama for semantic note search, achieving 95% accuracy via bidirectional clustering and sub-second queries on unstructured Markdown. Implemented local Xenova Transformers for vector embeddings and cosine similarity analysis, enabling privacy-preserving topic extraction and automatic organization of journal entries and thoughts."
-    },
-    {
       name: "Arc Decentralized Archive System",
-      date: "April 2025",
+      date: "July 2025",
       skills: "Rust, Distributed Systems, Cryptographic Verification",
-      summary: "Developed a decentralized, versioned, cryptographically-verifiable archive system designed to help people, conversations, and institutions preserve data securely across devices. Built with Rust for performance and security, featuring cryptographic verification and decentralized architecture for reliable data preservation."
+      summary: "Rust-built decentralized archive that rejects cloud dependency. Merkle proofs ensure tamper-proof history. Zero-knowledge sync lets nodes exchange data without exposure. DAG versioning preserves every state—no merges, nothing lost. Offline-first, self-healing, no central authority. Data that survives what kills everything else."
     },
     {
-      name: "Sira Conversation AI Assistant",
-      date: "May 2024",
+      name: "Luma AI Knowledge Engine",
+      date: "June 2025",
+      skills: "TypeScript, LangChain, LLMs, RAG Pipelines",
+      summary: "An Obsidian plugin that indexes and retrieves notes via local embeddings. Xenova handles vectorization client-side. LangChain orchestrates the RAG pipeline—takes queries, finds relevant chunks, synthesizes responses. Cosine similarity clusters related notes automatically, surfacing connections you missed. Everything stays local."
+    },
+    {
+      name: "Sira Conversational AI Assistant",
+      date: "March 2025",
       skills: "TypeScript, Bun, LangChain, OpenAI, Azure, Whisper",
-      summary: "Developed a conversational AI assistant featuring real-time token streaming that chunks and sequences LLM responses across multiple provider models, enabling seamless integration between local and remote systems with concurrent audio synthesis. Implemented voice-to-voice pipeline using Whisper.cpp for transcription, Azure/Google TTS from sequenced chunks, and CLI/HTTP interface with auto-routing for scalable deployment."
+      summary: "An offline-first voice assistant that routes queries through local or remote LLMs—no internet required. Whisper transcribes audio in real time. LangChain chunks responses, streams them back token-by-token so speech feels human. Built for when the grid dies or privacy kicks in."
     }
   ];
   
@@ -49,7 +49,7 @@ export default function Home() {
             transition={{ delay: 1.0, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed font-normal mt-3 sm:mt-4 md:mt-6"
           >
-            TypeScript, React.js, Next.js, LangChain, RAG pipelines, OpenAI. Building scalable applications that solve complex business problems.
+            TypeScript, Next.js, LangChain, RAG pipelines, OpenAI.<br />Building hybrid systems that prioritize privacy without sacrificing speed.
           </motion.p>
           
           <motion.div

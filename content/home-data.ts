@@ -17,80 +17,69 @@ export const homeData = [
 				name: "Arc Decentralized Archive System",
 				skills:
 					"Rust, Distributed Systems, Cryptographic Verification, Version Control, Data Preservation",
-				date: "April 2025",
+				date: "July 2025",
 				summary:
-					"Developed a decentralized, versioned, cryptographically-verifiable archive system designed to help people, conversations, and institutions preserve data securely across devices. Built with Rust for performance and security, featuring cryptographic verification and decentralized architecture for reliable data preservation.",
-			},
-			{
-				name: "Nayru TTS Application",
-				skills:
-					"TypeScript, Bun Runtime, Azure Cognitive Services, Google Cloud TTS, Audio Management, CLI Interface, State Management, Vitest",
-				date: "June 2025",
-				summary:
-					"Built a sophisticated Text-to-Speech application using TypeScript and Bun runtime. Features multi-provider TTS support (Azure Cognitive Services and Google Cloud Text-to-Speech), custom AudioController with queue management and mpv integration, CLI interface for audio operations, and persistent state management with comprehensive testing.",
-			},
-			{
-				name: "Jackpota Sweepstakes Automation Bot",
-				skills:
-					"TypeScript, Bun, Puppeteer, Sweepstakes Automation, Account Generation, Bonus Claiming, Disposable Email, Web Scraping",
-				date: "August 2025",
-				summary:
-					"Engineered an automated bot using Puppeteer and Bun for sweepstakes platforms that exploits promotional credits by generating multiple accounts. Features intelligent account creation with realistic user data, automated email verification through disposable mail services, form automation with fallback strategies, and automated gameplay to claim welcome bonuses.",
+					"Rust-built decentralized archive that rejects cloud dependency. Merkle proofs ensure tamper-proof history. Zero-knowledge sync lets nodes exchange data without exposure. DAG versioning preserves every state—no merges, nothing lost. Offline-first, self-healing, no central authority. Data that survives what kills everything else.",
 			},
 			{
 				name: "Luma AI Knowledge Engine",
 				skills:
-					"TypeScript, LangChain, Ollama, Xenova Transformers, RAG Pipelines",
-				date: "May 2025",
+					"TypeScript, LangChain, LLMs, RAG Pipelines, Vector Embeddings, Xenova Transformers",
+				date: "June 2025",
 				summary:
-					"Engineered Obsidian-native RAG pipeline with LangChain/Ollama for semantic note search, achieving 95% accuracy via bidirectional clustering and sub-second queries on unstructured Markdown. Implemented local Xenova Transformers for vector embeddings and privacy-preserving topic extraction.",
-			},
-			{
-				name: "Arcados Discord Bot (incl. Synapse AI Moderation)",
-				skills:
-					"TypeScript, Node.js, Discord.js, LangChain, OpenAI, MongoDB, Redis, Pinecone",
-				date: "September 2024",
-				summary:
-					"Developed AI-powered moderation pipeline with RAG for behavioral detection/summaries, real-time voice management, and self-healing across 200+ users. Implemented Redis-cached sync, conflict resolution, and performance monitoring.",
+					"An Obsidian plugin that indexes and retrieves notes via local embeddings. Xenova handles vectorization client-side. LangChain orchestrates the RAG pipeline—takes queries, finds relevant chunks, synthesizes responses into a wiki-style markdown database. Cosine similarity clusters related notes automatically, surfacing connections you missed. Everything stays local.",
 			},
 			{
 				name: "Sira Conversational AI Assistant",
-				skills:
-					"TypeScript, Bun, LangChain, OpenAI, Azure Cognitive Services, Whisper.cpp",
-				date: "May 2024",
+				skills: "TypeScript, Bun, LangChain, OpenAI, Azure, Whisper",
+				date: "March 2025",
 				summary:
-					"Developed a conversational AI assistant featuring real-time token streaming that chunks and sequences LLM responses across multiple provider models, enabling seamless integration between local and remote systems with concurrent audio synthesis.",
+					"An offline-first voice assistant that routes queries through local or remote LLMs—no internet required. Whisper transcribes audio in real time. LangChain chunks responses, streams them back token-by-token so speech feels human. Built for when the grid dies or privacy kicks in.",
+			},
+			{
+				name: "Community AI Engine",
+				skills:
+					"TypeScript, Bun, Discord.js, LangChain, MongoDB, Redis, LLMs, RAG Pipelines, Xenova Transformers",
+				date: "September 2024",
+				summary:
+					"A RAG-driven analyzer that transforms raw Discord chat into detailed relational maps—no spying, just clear insight. LangChain extracts keywords, Xenova embeds messages locally. Surfaces hidden alliances, drama clusters, and behavioral shifts—insights moderators would never catch. Intelligence wins, every time.",
+			},
+			{
+				name: "Jackpota Automation Bot",
+				skills: "TypeScript, Node, Web Scraping, Web Automation, Puppeteer",
+				date: "December 2024",
+				summary:
+					"Puppeteer-powered exploit of sweepstakes casino promos—no laws bent, just lazy rules gamed. Generates realistic users via RandomUser.me API, spins disposable emails for verification, fills forms. Handles popups, claims bonuses, and automates Spin-a-Win gameplay to cash out free credits—zero bans.",
 			},
 			{
 				name: "Map Generator",
 				skills:
-					"TypeScript, Next.js, Data Visualization, Procedural Generation, Interactive Graphics, Algorithmic Design",
-				date: "October 2024",
+					"TypeScript, Next.js, LLMs, Data Visualization, Interactive Graphics",
+				date: "March 2024",
 				summary:
-					"Developed a comprehensive map generation application using TypeScript and modern web technologies. Features algorithmic map creation, interactive visualization, and procedural generation capabilities. Demonstrates expertise in data visualization, algorithmic design, and user interface development with real-time rendering capabilities.",
+					"AI-powered visualizer that turns prompts into maps—no manual GIS. GPT-4 via LangChain generates data from historical knowledge—routes, events, trade networks, geographic features; Next.js manages server-side processing, Mapbox renders interactive layers. Built for historians, educators, researchers tracing real threads.",
 			},
 			{
-				name: "Voxctl TTS",
+				name: "Nayru TTS Application",
 				skills:
-					"Golang, Azure Services, RESTful APIs, Multi-threading, Asynchronous programming ",
-				date: "May 2024",
+					"TypeScript, Bun Runtime, Azure Cognitive Services, Google Cloud TTS, Audio Management, CLI",
+				date: "October 2023",
 				summary:
-					"Improved speech processing efficiency by developing a terminal-based text-to-speech interface with modular design and RESTful API, enabling seamless handling of command line and HTTP requests for immediate audio playback.",
+					"CLI-driven voice tool built on Bun and TypeScript. Delivers smooth, seamless audio playback with a lightweight, efficient scheduler that handles multiple requests without stuttering. Designed for terminal users—devs, sysadmins, or anyone—needing dependable speech output in headless environments. Compact footprint, privacy baked in.",
+			},
+			{
+				name: "Split-Screen Video",
+				skills: "TypeScript, Next.js, Zustand State Management",
+				date: "September 2023",
+				summary:
+					"Next.js multi-screen player with TypeScript and Zustand for state control—no lag, no mess. Streams synced video feeds for sports techs, AV crews, or multitaskers. Built to handle real-time splits without crashing—responsive, lean, and tailored.",
 			},
 			{
 				name: "CinDay Computer Database Application",
 				skills: "TypeScript, Next.js, Redux State Management, Prisma ORM",
-				date: "September 2023",
+				date: "July 2023",
 				summary:
-					"Enhanced student device management by creating a full-stack React application with Next.js and Prisma, leveraging Redux and automated ORM to significantly reduce IT support tickets and improve overall system performance.",
-			},
-			{
-				name: "Split-Screen Video",
-				skills:
-					"TypeScript, Next.js, Zustand State Management, Recursive Programming",
-				date: "November 2023",
-				summary:
-					"Developed a high-performance web-based multi-screen media player using React and Zustand, demonstrating proficiency in modern web technologies and efficient state management techniques for potential use in event production.",
+					"Next.js dashboard that streamlines IT ticketing for educational tech—no more ticket black holes. Prisma ORM automates device tracking and support routing, Redux manages state for real-time updates. Handles hardware logs, issue classification, and workflow queues with zero manual drudgery.",
 			},
 		],
 	},
@@ -98,25 +87,32 @@ export const homeData = [
 		category: "WORK EXPERIENCE",
 		experiences: [
 			{
+				name: "Aladdin's Eatery",
+				skills: "Kitchen Prep Cook",
+				date: "October 2024 - Present",
+				summary:
+					"Streamlined ingredient prep for Lebanese-American dishes with a lean team—optimized workflows, kept quality razor-sharp, fed guests without a hitch. Upheld hygiene and safety standards solo, tracked stock with precision, tackled issues before they scaled.",
+			},
+			{
 				name: "CinDay Academy",
 				skills: "IT Assistant",
-				date: "February 2023 - Present",
+				date: "February 2023 - September 2023",
 				summary:
-					"Collaborated with administration to enhance technology usage, optimize information systems, and provide exceptional support for students and faculty. Maintained IT infrastructure, addressed hardware / software concerns, and ensured system-wide security.",
+					"Collaborated closely with an IT team to enhance technology systems, maintain infrastructure, troubleshoot hardware and software issues, and uphold stringent security measures for students and faculty.",
 			},
 			{
 				name: "Citizens NYC",
 				skills: "Commissary Chef",
 				date: "September 2019 - August 2020",
 				summary:
-					"Oversaw inventory management and large-scale recipe execution, ensuring timely deliveries to multiple restaurant locations while handling invoices and orders with precision. Prioritized tasks amid changing demands, maintaining accurate inventory to support seamless operations across 5 storefronts.",
+					"Managed inventory and scaled recipe production, ensuring on-time deliveries to five restaurant locations while handling invoices and orders with surgical precision.",
 			},
 			{
 				name: "Rookwood Pottery Company",
 				skills: "Inventory Manager",
 				date: "January 2013 - December 2015",
 				summary:
-					"Oversaw 80,000+ pre-fired art/pottery and ceramic products, optimizing interdepartmental exchanges for in-house and external clients in hospitality and restoration projects. Applied organizational and analytical skills to track complex inventory systems.",
+					"Oversaw 80,000+ SKU ceramics inventory—pre-fired art and tiles for hospitality and restoration—routing exchanges across departments with zero slip-ups. Handled seasonal demands and deliveries in a vast 88,000 sq ft space, stepping up to the youngest department manager at 18 after a summer internship.",
 			},
 		],
 	},
