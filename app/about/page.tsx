@@ -11,21 +11,21 @@ export default function AboutPage() {
 			name: "AI & Machine Learning",
 			skills: skills1,
 			description:
-				"I have built multiple AI-driven applications using LangChain, RAG pipelines, and conversational AI. My expertise includes OpenAI integration, local LLM deployment with Ollama, vector embeddings, semantic search, and context engineering.",
+				"In AI, the edge is the data you control, not the model. RAG pipelines pull precise, encrypted context—offline when needed—while LangChain drives agentic workflows with clean, autonomous action. Embeddings reveal key connections. My projects—local notes, offline voices, decentralized archives—prove AI thrives on secure data. I prioritize control, then scale.",
 			color: "from-blue-500 to-purple-600",
 		},
 		{
 			name: "Automation Engineering",
 			skills: skills2,
 			description:
-				"I specialize in building sophisticated automation solutions using Puppeteer, browser scripting, and intelligent process automation. My expertise includes web automation, account generation systems, form automation, data extraction, and workflow optimization.",
+				"In automation, the goal is simple: eliminate waste. Five years on Linux has shown me every system fights friction, scripts fix this. Puppeteer does the web the same way: no clicks, no repeats. TypeScript keeps code tight, Don't Repeat Yourself isn't optional, it's structural. Efficiency isn't flashy; it's the quiet habit of removing what doesn't move. That's all.",
 			color: "from-green-500 to-teal-600",
 		},
 		{
 			name: "Technical Infrastructure",
 			skills: skills3,
 			description:
-				"I have extensive experience building and maintaining robust technical infrastructure supporting AI and automation systems. My expertise spans multiple programming languages, cloud platforms, database management, and system administration.",
+				"Through Technical Infrastructure and systems engineering, I prototype fast with Rust, Bun, or Node, then reinforce with secure databases-local by default, cloud only for speed. Logic balances low-level efficiency with high-level clarity, optimizing workload between user and server. Five years taught me: build quick, prove it, distribute smart, and lock it down.",
 			color: "from-orange-500 to-red-600",
 		},
 	];
