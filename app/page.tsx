@@ -130,15 +130,18 @@ export default function Home() {
         
         <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start max-w-6xl mx-auto">
           {featuredProjects.map((project, index) => (
-            <motion.div
+            <Link
               key={project.name}
-              whileHover={{ scale: 1.02, y: -4 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-              viewport={{ once: true }}
-              className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-[450px] flex flex-col"
+              href={`/projects?project=${encodeURIComponent(project.name)}`}
             >
+              <motion.div
+                whileHover={{ scale: 1.02, y: -4 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                viewport={{ once: true }}
+                className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-[450px] flex flex-col cursor-pointer"
+              >
               {/* Header Section */}
               <div className="flex justify-between items-start mb-3 sm:mb-4 md:mb-6 flex-shrink-0">
                 <h3 className="text-xl font-bold text-foreground leading-tight tracking-tight flex-1 pr-4  transition-colors duration-300">
@@ -165,7 +168,8 @@ export default function Home() {
               <p className="text-foreground/70 text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300 flex-grow overflow-hidden">
                 {project.summary}
               </p>
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </section>
