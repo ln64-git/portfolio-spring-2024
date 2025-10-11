@@ -255,47 +255,89 @@ export default function ProjectsPage() {
 
 	const categorizeProject = (project: (typeof projectData)[0]) => {
 		const techString = project.techArray.join(" ").toLowerCase();
+		const categories: string[] = [];
+		
+		// Check AI/ML
 		if (
 			techString.includes("ai") ||
 			techString.includes("langchain") ||
 			techString.includes("rag") ||
 			techString.includes("openai") ||
-			techString.includes("whisper")
+			techString.includes("whisper") ||
+			techString.includes("llms") ||
+			techString.includes("rag-pipelines") ||
+			techString.includes("vector-embeddings") ||
+			techString.includes("xenova-transformers")
 		) {
-			return "ai";
+			categories.push("ai");
 		}
-		if (
-			techString.includes("next") ||
-			techString.includes("react") ||
-			techString.includes("vue") ||
-			techString.includes("web")
-		) {
-			return "web";
-		}
+		
+		// Check automation
 		if (
 			techString.includes("automation") ||
 			techString.includes("bot") ||
-			techString.includes("puppeteer")
+			techString.includes("puppeteer") ||
+			techString.includes("web-automation") ||
+			techString.includes("web-scraping") ||
+			techString.includes("discordjs") ||
+			techString.includes("cli") ||
+			techString.includes("audio-management")
 		) {
-			return "automation";
+			categories.push("automation");
 		}
+		
+		// Check systems/infrastructure
 		if (
 			techString.includes("rust") ||
 			techString.includes("decentralized") ||
 			techString.includes("cryptographic") ||
-			techString.includes("database")
+			techString.includes("database") ||
+			techString.includes("distributed-systems") ||
+			techString.includes("version-control") ||
+			techString.includes("data-preservation") ||
+			techString.includes("mongodb") ||
+			techString.includes("redis") ||
+			techString.includes("postgresql") ||
+			techString.includes("springboot") ||
+			techString.includes("java") ||
+			techString.includes("prisma") ||
+			techString.includes("orm") ||
+			techString.includes("nodejs")
 		) {
-			return "systems";
+			categories.push("systems");
 		}
-		return "web"; // default
+		
+		// Check web development (frontend-focused)
+		if (
+			techString.includes("nextjs") ||
+			techString.includes("react") ||
+			techString.includes("vue") ||
+			techString.includes("web-development") ||
+			techString.includes("web-app") ||
+			techString.includes("web-application") ||
+			techString.includes("zustand") ||
+			techString.includes("redux") ||
+			techString.includes("frontend") ||
+			techString.includes("ui") ||
+			techString.includes("ux")
+		) {
+			categories.push("web");
+		}
+		
+		// If no categories matched, default to web
+		if (categories.length === 0) {
+			categories.push("web");
+		}
+		
+		return categories;
 	};
 
 	const filteredProjects =
 		selectedCategory === "all"
 			? projectData
-			: projectData.filter(
-					(project) => categorizeProject(project) === selectedCategory,
-				);
+			: projectData.filter((project) => 
+				categorizeProject(project).includes(selectedCategory)
+			);
 
   return (
 		<div className="relative mx-auto max-w-7xl font-montserrat py-4 sm:py-8 md:py-12 px-4 sm:px-6 md:px-8">
