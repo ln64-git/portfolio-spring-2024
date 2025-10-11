@@ -11,7 +11,7 @@ export default function AboutPage() {
 			name: "AI & Machine Learning",
 			skills: skills1,
 			description:
-				"In AI, the edge is the data you control, not the model. RAG pipelines pull precise, encrypted context—offline when needed—while LangChain drives agentic workflows with clean, autonomous action. Embeddings reveal key connections. My projects—local notes, offline voices, decentralized archives—prove AI thrives on secure data. I prioritize control, then scale.",
+				"In AI, the edge is with data you control, not the model. RAG pipelines pull precise, encrypted context—offline when needed—while LangChain drives agentic workflows with clean, autonomous action. Embeddings reveal key connections. My projects—local notes, offline voices, decentralized archives—prove AI thrives on secure data. I prioritize control, then scale.",
 			color: "from-blue-500 to-purple-600",
 		},
 		{
