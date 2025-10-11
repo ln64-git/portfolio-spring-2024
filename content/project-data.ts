@@ -56,7 +56,7 @@ const projectData = [
 			"rag-pipelines",
 			"xenova-transformers",
 		],
-		githubUrl: "https://github.com/ln64-git/arcados-discord-bot",
+		githubUrl: "https://github.com/ln64-git/arcados-bot",
 	},
 	{
 		name: "Jackpota Automation Bot",
@@ -110,7 +110,7 @@ const projectData = [
 		summary:
 			"Next.js + TypeScript portfolio with flexible theming. Features dynamic animations with Framer Motion, responsive design, and zero-load contact forms via EmailJS. Built with Tailwind CSS and HeroUI. Demonstrates clean code architecture, smooth animations, and attention to detail.",
 		image: "portfolio",
-		techArray: ["typescript", "nextjs"],
+		techArray: ["typescript", "reactjs", "nextjs", "tailwindcss", "framer-motion"],
 		demoUrl: "https://lukeanthony007.com/",
 		githubUrl: "https://github.com/ln64-git/vite-react-portfolio",
 	},
@@ -132,7 +132,7 @@ const projectData = [
 		image: "database",
 		techArray: ["nextjs", "react", "prisma", "redux"],
 		demoUrl: "https://computer-database-demo.vercel.app/",
-		githubUrl: "https://github.com/ln64-git/database-ui",
+		githubUrl: "https://github.com/ln64-git/cinday-computer-database",
 	},
 	{
 		name: "StockOverflow",

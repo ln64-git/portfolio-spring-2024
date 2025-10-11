@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
 	name: "LukeAnthony007",
 	description:
-		"Aspiring full-stack developer with hands-on experience in AI-driven data processing through personal projects using TypeScript, LangChain, and RAG pipelines.",
+		"Full-stack developer specializing in AI-driven automation and intelligent systems.",
 	navItems: [
 		{
 			label: "Home",
