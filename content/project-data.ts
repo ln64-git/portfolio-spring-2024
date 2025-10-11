@@ -108,7 +108,7 @@ const projectData = [
 		name: "Personal Portfolio",
 		date: "January 2024",
 		summary:
-			"Next.js + TypeScript showcase—no corporate boilerplate. Clean animations (Framer Motion), zero-load email (EmailJS), responsive down to 320px. Built to demonstrate front-end muscle and design restraint in one breath: one page, one scroll, one impression. Shows I can ship pretty things that don't break, don't bloat, don't beg for attention. Just works.",
+			"Next.js + TypeScript portfolio with flexible theming. Features dynamic animations with Framer Motion, responsive design, and zero-load contact forms via EmailJS. Built with Tailwind CSS and HeroUI. Demonstrates clean code architecture, smooth animations, and attention to detail.",
 		image: "portfolio",
 		techArray: ["typescript", "nextjs"],
 		demoUrl: "https://lukeanthony007.com/",

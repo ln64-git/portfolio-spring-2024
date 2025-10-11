@@ -310,6 +310,9 @@ export default function ProjectsPage() {
 					<TextGenerateEffect
 						className={title({ size: "lg", color: "foreground" })}
 						words="Innovative Projects & Technical Solutions"
+						highlightedWords={[
+							{ word: "Innovative", color: "blue" }
+						]}
 					/>
 
 					<motion.p
@@ -407,7 +410,7 @@ export default function ProjectsPage() {
 							</div>
 
 							{/* Project Description */}
-							<p className="text-muted-foreground text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300 mb-6 line-clamp-3 flex-grow">
+							<p className="text-muted-foreground text-sm leading-relaxed font-normal group-hover:text-foreground/80 transition-colors duration-300 mb-6 flex-grow">
 								{project.summary}
 							</p>
 

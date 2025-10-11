@@ -127,6 +127,8 @@ export default function ContactPage() {
 					<TextGenerateEffect
 						className={title({ size: "lg", color: "foreground" })}
 						words="Let's Build Something Amazing Together"
+						highlightedWords={[
+						]}
 					/>
 
 					<motion.p

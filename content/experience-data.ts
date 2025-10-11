@@ -7,7 +7,7 @@ const experienceData = [
 		summary:
 			"Streamlined ingredient prep for Lebanese-American dishes with a lean team—optimized workflows, kept quality razor-sharp, fed guests without a hitch. Upheld hygiene and safety standards solo, tracked stock with precision, tackled issues before they scaled.",
 		bulletArray: [
-			"Ran quality audits on ingredients and methods, slashing waste and lifting dish consistency with optimized strategies.",
+			"Ran quality audits on ingredients and methods, slashing waste with optimized strategies.",
 			"Nailed prep tasks under zero oversight, ensuring seamless flow and a top-notch dining vibe every shift.",
 		],
 	},

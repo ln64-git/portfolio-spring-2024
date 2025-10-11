@@ -41,6 +41,11 @@ export default function Home() {
           <TextGenerateEffect
             className={title({ size: "lg", color: "foreground" })}
             words="Full-stack developer specializing in AI-driven automation and intelligent systems"
+            highlightedWords={[
+              { word: "Full-stack", color: "violet" },
+              { word: "automation", color: "blue" },
+              { word: "intelligent", color: "yellow" }
+            ]}
           />
           
           <motion.p

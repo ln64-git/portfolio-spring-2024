@@ -4,12 +4,19 @@ import { useEffect } from "react";
 import { title } from "@/components/primitives";
 import { cn } from "@/utils/cn";
 
+export interface HighlightedWord {
+	word: string;
+	color: "violet" | "blue" | "yellow" | "green" | "tan" | "cyan" | "pink" | "silver" | "foreground";
+}
+
 export const TextGenerateEffect = ({
 	words,
 	className,
+	highlightedWords = [],
 }: {
 	words: string;
 	className?: string;
+	highlightedWords?: HighlightedWord[];
 }) => {
 	const [scope, animate] = useAnimate();
 	const wordsArray = words.split(" ");
@@ -27,18 +34,14 @@ export const TextGenerateEffect = ({
 		);
 	}, [animate]);
 
-	const actionWordOneClasses = cn(title({ color: "violet" }), "opacity-0");
-	const actionWordTwoClasses = cn(title({ color: "blue" }), "opacity-0 ");
-	const actionWordThreeClasses = cn(title({ color: "yellow" }), "opacity-0 ");
-
-	const wordClasses = (index: number) => {
-		// Highlight "Full-stack" (index 0) with violet, "automation" (index 5) with blue, and "intelligent" (index 7) with green
-		if (index === 0) {
-			return actionWordOneClasses; // violet
-		} else if (index === 5) {
-			return actionWordTwoClasses; // blue
-		} else if (index === 7) {
-			return actionWordThreeClasses; // green
+	const getWordClasses = (word: string) => {
+		// Check if this word should be highlighted
+		const highlightedWord = highlightedWords.find(hw => 
+			hw.word.toLowerCase() === word.toLowerCase()
+		);
+		
+		if (highlightedWord) {
+			return cn(title({ color: highlightedWord.color }), "opacity-0");
 		} else {
 			return cn(title(), "opacity-0");
 		}
@@ -59,23 +62,13 @@ export const TextGenerateEffect = ({
 				}}
 			>
 				{wordsArray.map((word, index) => {
-					// Remove hardcoded line breaks and let CSS handle natural wrapping
-					// Only add line breaks for specific highlighted words to create visual emphasis
-					if (index === 0) {
-						// Break after "Full-stack" for visual emphasis
-						return (
-							<motion.span key={word} className={wordClasses(index)}>
-								{`${word} `}
-								<br />
-							</motion.span>
-						);
-					} else {
-						return (
-							<motion.span key={word} className={wordClasses(index)}>
-								{`${word} `}
-							</motion.span>
-						);
-					}
+					const uniqueKey = `${word}-${wordsArray.slice(0, index).join('-')}`;
+					return (
+						<motion.span key={uniqueKey} className={getWordClasses(word)}>
+							{`${word} `}
+							{index === 0 && <br />}
+						</motion.span>
+					);
 				})}
 			</motion.div>
 		);
