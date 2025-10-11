@@ -140,7 +140,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                 viewport={{ once: true }}
-                className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-[450px] flex flex-col cursor-pointer"
+                className="group bg-content1/50 backdrop-blur-xl rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500 shadow-lg hover:shadow-2xl hover:bg-content1/70 border border-content2/10 hover:border-content2/30 h-auto sm:h-[420px] md:h-[450px] flex flex-col cursor-pointer"
               >
               {/* Header Section */}
               <div className="flex justify-between items-start mb-3 sm:mb-4 md:mb-6 flex-shrink-0">
