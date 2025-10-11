@@ -18,7 +18,7 @@ export default function AboutPage() {
 			name: "Automation Engineering",
 			skills: skills2,
 			description:
-				"In automation, the goal is simple: eliminate waste. Five years on Linux has shown me every system fights friction, scripts fix this. Puppeteer does the web the same way: no clicks, no repeats. TypeScript keeps code tight, Don't Repeat Yourself isn't optional, it's structural. Efficiency isn't flashy; it's the quiet habit of removing what doesn't move. That's all.",
+				"In automation, the goal is simple: eliminate waste. Linux has shown me every system fights friction, scripts fix this. Puppeteer does the web the same way: no clicks, no repeats. TypeScript keeps code tight, Don't Repeat Yourself isn't optional, it's structural. Efficiency isn't flashy; it's the quiet habit of removing what doesn't move. That's all.",
 			color: "from-green-500 to-teal-600",
 		},
 		{
