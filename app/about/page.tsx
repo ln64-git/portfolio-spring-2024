@@ -11,21 +11,21 @@ export default function AboutPage() {
 			name: "AI & Machine Learning",
 			skills: skills1,
 			description:
-				"In AI, the edge is with data you control, not the model. RAG pipelines pull precise, encrypted context—offline when needed—while LangChain drives agentic workflows with clean, autonomous action. Embeddings reveal key connections. My projects—local notes, offline voices, decentralized archives—prove AI thrives on secure data. I prioritize control, then scale.",
+				"In AI, the edge is with data you control, not the model. RAG pipelines pull precise context while LangChain drives agentic workflows and embeddings reveal key connections. My projects prove that AI thrives on secure data. I prioritize control, then scale.",
 			color: "from-blue-500 to-purple-600",
 		},
 		{
 			name: "Automation Engineering",
 			skills: skills2,
 			description:
-				"In automation, the goal is simple: eliminate waste. Linux has shown me every system fights friction, scripts fix this. Puppeteer does the web the same way: no clicks, no repeats. TypeScript keeps code tight, Don't Repeat Yourself isn't optional, it's structural. Efficiency isn't flashy; it's the quiet habit of removing what doesn't move. That's all.",
+				"In automation, the goal is simple: eliminate waste. Linux has shown me every system fights friction, scripts fix this. Puppeteer helps moving across the web. Efficiency isn't flashy; it's the quiet habit of removing what doesn't move.",
 			color: "from-green-500 to-teal-600",
 		},
 		{
 			name: "Technical Infrastructure",
 			skills: skills3,
 			description:
-				"Through Technical Infrastructure and systems engineering, I prefer to prototype fast with TypeScript or Rust, then reinforce with secure databases-local by default, cloud only for speed. Logic balances low-level efficiency with high-level clarity, optimizing workload between user and server. I've learned to build quick, prove it, distribute smart, then lock it down.",
+				"Through Technical Infrastructure and systems engineering, I prefer to prototype fast with TypeScript or Rust, then reinforce. Logic balances low-level efficiency with high-level clarity, optimizing workload between user and server.",
 			color: "from-orange-500 to-red-600",
 		},
 	];
@@ -52,7 +52,7 @@ export default function AboutPage() {
 					<Image
 									width={256}
 									height={320}
-									alt="Luke Anthony - AI & Automation Specialist"
+									alt="Luke Anthony - AI & Automation"
 						src="https://i.imgur.com/PbMQHyX.jpeg"
 									className="w-full h-full object-cover"
 					/>

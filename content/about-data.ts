@@ -38,7 +38,7 @@ const aboutData = {
 		["Pinecone Vector DB", 1],
 	],
 	summary:
-		"AI and automation specialist building intelligent solutions with LangChain, RAG pipelines, and conversational AI. Passionate about creating sophisticated automated workflows that bridge AI capabilities with practical application.",
+		"Building intelligent solutions with LangChain, RAG pipelines, and conversational AI. Passionate about creating automated workflows that bridge AI capabilities with practical application.",
 };
 
 export default aboutData;
