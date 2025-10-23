@@ -95,22 +95,23 @@ export default function Home() {
       {/* Stats Grid */}
       <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10 md:mb-12 w-full max-w-4xl mx-auto">
         {[
-          { number: "5+", label: "Years Experience" },
-          { number: "11", label: "Projects" },
-          { number: "100%", label: "Satisfaction" },
-          { number: "32+", label: "Skills" }
+          { number: "5+", label: "Years Experience", href: "/about" },
+          { number: "11", label: "Projects", href: "/projects" },
+          { number: "100%", label: "Satisfaction", href: "/projects" },
+          { number: "32+", label: "Skills", href: "/about" }
         ].map((stat, index) => (
-          <motion.div
-            key={stat.label}
-            whileHover={{ scale: 1.02, y: -1 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 + index * 0.1, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-            className="bg-content1/60 backdrop-blur-lg rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-102 hover:bg-content1/80 flex flex-col items-center justify-center text-center min-h-[120px] sm:min-h-[140px] md:min-h-[160px]"
-          >
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-foreground mb-1 sm:mb-2 tracking-tight">{stat.number}</div>
-            <div className="text-xs sm:text-xs md:text-sm text-default-600 font-light tracking-[0.05em] uppercase leading-tight whitespace-nowrap">{stat.label}</div>
-          </motion.div>
+          <Link key={stat.label} href={stat.href}>
+            <motion.div
+              whileHover={{ scale: 1.02, y: -1 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 + index * 0.1, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+              className="bg-content1/60 backdrop-blur-lg rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-102 hover:bg-content1/80 flex flex-col items-center justify-center text-center min-h-[120px] sm:min-h-[140px] md:min-h-[160px] cursor-pointer"
+            >
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-foreground mb-1 sm:mb-2 tracking-tight">{stat.number}</div>
+              <div className="text-xs sm:text-xs md:text-sm text-default-600 font-light tracking-[0.05em] uppercase leading-tight whitespace-nowrap">{stat.label}</div>
+            </motion.div>
+          </Link>
         ))}
       </section>
 
